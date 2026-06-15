@@ -80,7 +80,7 @@ To dla mnie najważniejszy punkt. ClaudeScope:
 - liczy wszystko **lokalnie w Twojej przeglądarce**, żadne dane nie wychodzą na zewnętrzny serwer,
 - nie wymaga konta, logowania ani rejestracji.
 
-Kod jest publicznie widoczny na GitHubie. Każdy, kto się zna, może sprawdzić, że naprawdę nic nie wycieka. To nie jest open source w sensie „rób co chcesz", ale jest transparentny w sensie „możesz zobaczyć każdy bajt".
+Uprawnienia, które wtyczka deklaruje przy instalacji, są dokładnie tym, co opisałem powyżej. Możesz je sprawdzić w ustawieniach przeglądarki w każdej chwili.
 
 ## Jak zainstalować
 
