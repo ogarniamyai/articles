@@ -1,6 +1,6 @@
 ---
 slug: "claudex-wtyczka-do-claude-ai"
-title: "Claudex — twoje limity Claude'a zawsze pod ręką"
+title: "ClaudeX — twoje limity Claude'a zawsze pod ręką"
 excerpt: "Monitoruj wykorzystanie limitów Claude'a na bieżąco i nie daj się zaskoczyć w środku ważnej rozmowy."
 cover: "./assets/cover.png"
 category: "Narzędzia"
@@ -8,11 +8,11 @@ category: "Narzędzia"
 
 Znasz to uczucie, kiedy w połowie ważnej rozmowy z Claude'em okazuje się, że właśnie wyczerpałeś limit i musisz czekać kilka godzin na reset? Gdybyś wiedział dziesięć minut wcześniej, że jesteś blisko końca puli, przełączyłbyś się na tańszy model albo zmniejszył effort i dociągnął rozmowę do końca. A może po prostu chciałbyś obserwować własne wzorce: które prompty zjadają najwięcej tokenów, kiedy w ciągu doby tracisz limit najszybciej.
 
-Po to powstała **Claudex** — darmowa wtyczka, która siedzi przyklejona do okna claude.ai i pokazuje na bieżąco, ile zostało Ci 5-godzinnego limitu, ile tygodniowego, kiedy się odnowią i czy akurat trafiłeś na godziny szczytu. W tym artykule pokażę, co dokładnie mierzy i jak to wygląda.
+Po to powstała **ClaudeX** — darmowa wtyczka, która siedzi przyklejona do okna claude.ai i pokazuje na bieżąco, ile zostało Ci 5-godzinnego limitu, ile tygodniowego, kiedy się odnowią i czy akurat trafiłeś na godziny szczytu. W tym artykule pokażę, co dokładnie mierzy i jak to wygląda.
 
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
 
-![Panel boczny Claudex przyklejony do okna claude.ai](./assets/extension-mini-panel.png)
+![Panel boczny ClaudeX przyklejony do okna claude.ai](./assets/extension-mini-panel.png)
 
 Panel jest wąski i nie zasłania rozmowy. Od góry do dołu pokazuje:
 
@@ -60,7 +60,7 @@ Reguła jest prosta: nie chodzi o to, żeby w peak hours nie pisać. Chodzi o to
 
 Sekcja **AKTYWNOŚĆ** to wykres z dwiema osiami. Lewa oś pionowa to czas spędzony z Claude'em, prawa to procent wykorzystania limitów. Słupki pokazują, jak długo siedziałeś w danym przedziale czasu, a małe kropki nad nimi to dwa Twoje limity: **5-godzinny** i **7-dniowy**.
 
-Po najechaniu na konkretną kropkę zobaczysz ostatnią odczytaną wartość limitu z tego momentu — czyli ile zostało Ci puli, kiedy Claudex sprawdzał. Z czasem kropki układają się w krzywą rosnącą: tak właśnie wygląda Twój dzień (albo tydzień) od strony wyczerpywania limitu.
+Po najechaniu na konkretną kropkę zobaczysz ostatnią odczytaną wartość limitu z tego momentu — czyli ile zostało Ci puli, kiedy ClaudeX sprawdzał. Z czasem kropki układają się w krzywą rosnącą: tak właśnie wygląda Twój dzień (albo tydzień) od strony wyczerpywania limitu.
 
 Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**, **ostatni miesiąc**. Po kilku dniach używania zaczniesz widzieć własne wzorce — kiedy wpadasz w limit, w jakich godzinach pracujesz najciężej, kiedy odpuszczasz.
 
@@ -74,7 +74,7 @@ Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole),
 
 ## A co z prywatnością
 
-To dla mnie najważniejszy punkt. Claudex:
+To dla mnie najważniejszy punkt. ClaudeX:
 
 - ma dostęp **wyłącznie do claude.ai**, do żadnej innej strony,
 - liczy wszystko **lokalnie w Twojej przeglądarce** — żadne dane nie wychodzą na zewnętrzny serwer,
