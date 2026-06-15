@@ -1,6 +1,6 @@
 ---
 slug: "claudescope-wtyczka-do-claude-ai"
-title: "ClaudeScope — twoje limity Claude'a zawsze pod ręką"
+title: "ClaudeScope: twoje limity Claude'a zawsze pod ręką"
 excerpt: "Monitoruj wykorzystanie limitów Claude'a na bieżąco i nie daj się zaskoczyć w środku ważnej rozmowy."
 cover: "./assets/cover.png"
 category: "Narzędzia"
@@ -8,7 +8,7 @@ category: "Narzędzia"
 
 Znasz to uczucie, kiedy w połowie ważnej rozmowy z Claude'em okazuje się, że właśnie wyczerpałeś limit i musisz czekać kilka godzin na reset? Gdybyś wiedział dziesięć minut wcześniej, że jesteś blisko końca puli, przełączyłbyś się na tańszy model albo zmniejszył effort i dociągnął rozmowę do końca. A może po prostu chciałbyś obserwować własne wzorce: które prompty zjadają najwięcej tokenów, kiedy w ciągu doby tracisz limit najszybciej.
 
-Po to powstała **ClaudeScope** — darmowa wtyczka, która siedzi przyklejona do okna claude.ai i pokazuje na bieżąco, ile zostało Ci 5-godzinnego limitu, ile tygodniowego, kiedy się odnowią i czy akurat trafiłeś na godziny szczytu. W tym artykule pokażę, co dokładnie mierzy i jak to wygląda.
+Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona do okna claude.ai i pokazuje na bieżąco, ile zostało Ci 5-godzinnego limitu, ile tygodniowego, kiedy się odnowią i czy akurat trafiłeś na godziny szczytu. W tym artykule pokażę, co dokładnie mierzy i jak to wygląda.
 
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
 
@@ -16,13 +16,13 @@ Po to powstała **ClaudeScope** — darmowa wtyczka, która siedzi przyklejona d
 
 Panel jest wąski i nie zasłania rozmowy. Od góry do dołu pokazuje:
 
-- **Limit 5-godzinny** — pasek z procentem i licznikiem do resetu.
-- **Limit tygodniowy** — to samo, tylko dla puli 7-dniowej.
-- **Cykl subskrypcji** — kółko z procentem zużycia okresu rozliczeniowego i licznikiem dni.
-- **Czas aktywności** — ile dziś spędziłeś z Claude'em. Liczy tylko gdy karta jest aktywna, więc nie nakręca licznika w tle.
-- **Wskaźnik peak hours** — świeci, kiedy jesteś w godzinach szczytu.
-- **Strzałka po lewej** — zwija panel do wąskiego paska, jeśli akurat potrzebujesz miejsca.
-- **Ikona wykresu na dole** — otwiera panel szczegółowy z czterema osobnymi sekcjami. Tam dzieje się cała analityka.
+- **Limit 5-godzinny**: pasek z procentem i licznikiem do resetu.
+- **Limit tygodniowy**: to samo, tylko dla puli 7-dniowej.
+- **Cykl subskrypcji**: kółko z procentem zużycia okresu rozliczeniowego i licznikiem dni.
+- **Czas aktywności**: ile dziś spędziłeś z Claude'em. Licznik chodzi tylko gdy karta jest aktywna, więc nie nakręca się w tle.
+- **Wskaźnik peak hours**: świeci, kiedy jesteś w godzinach szczytu.
+- **Strzałka po lewej**: zwija panel do wąskiego paska, jeśli akurat potrzebujesz miejsca.
+- **Ikona wykresu na dole**: otwiera panel szczegółowy z czterema osobnymi sekcjami. Tam dzieje się cała analityka.
 
 ## Prompty według modelu: gdzie kończą się Twoje zapytania
 
@@ -44,13 +44,13 @@ Sekcja **LIMITY** to to samo, co paski na panelu bocznym, tylko z konkretami: pr
 
 Sekcja **SUBSKRYPCJA** podaje datę odnowienia, liczbę dni do końca cyklu i status płatności. Brzmi jak drobiazg, ale potrafi uratować przed dwoma niespodziankami.
 
-Pierwsza: płatność nie przejdzie, bo karta wygasła albo na koncie nie ma środków — wtedy Claude przestaje działać bez ostrzeżenia w środku tygodnia pracy. Druga: chcesz odpiąć subskrypcję, ale masz jeszcze niedokończone zadanie. Widzisz „zostały trzy dni", więc planujesz tak, żeby zdążyć zamknąć temat przed wygaśnięciem.
+Pierwsza: płatność nie przejdzie, bo karta wygasła albo na koncie nie ma środków. Wtedy Claude przestaje działać bez ostrzeżenia, w środku tygodnia pracy. Druga: chcesz odpiąć subskrypcję, ale masz jeszcze niedokończone zadanie. Widzisz „zostały trzy dni" i planujesz tak, żeby zdążyć zamknąć temat przed wygaśnięciem.
 
 ## Peak hours: kiedy unikać ciężkich promptów
 
 ![Mapa godzin szczytu w skali doby](./assets/extension-peak-hours.png)
 
-Anthropic potwierdziło, że są godziny, w których ten sam prompt zżera więcej z puli. Sekcja **PEAK HOURS** rysuje rozkład doby z zaznaczonymi takimi pasmami. Zwróć uwagę, że strefy przesuwają się razem ze zmianą czasu letni/zimowy — wtyczka uwzględnia to po Twojej stronie.
+Anthropic potwierdziło, że są godziny, w których ten sam prompt zżera więcej z puli. Sekcja **PEAK HOURS** rysuje rozkład doby z zaznaczonymi takimi pasmami. Zwróć uwagę, że strefy przesuwają się razem ze zmianą czasu letni/zimowy, więc wtyczka uwzględnia to po Twojej stronie.
 
 Reguła jest prosta: nie chodzi o to, żeby w peak hours nie pisać. Chodzi o to, żeby na ten czas nie planować ciężkich promptów z dużym kontekstem, długimi załącznikami albo wysokim effortem. Lekkie pytania puszczaj kiedy chcesz.
 
@@ -60,9 +60,9 @@ Reguła jest prosta: nie chodzi o to, żeby w peak hours nie pisać. Chodzi o to
 
 Sekcja **AKTYWNOŚĆ** to wykres z dwiema osiami. Lewa oś pionowa to czas spędzony z Claude'em, prawa to procent wykorzystania limitów. Słupki pokazują, jak długo siedziałeś w danym przedziale czasu, a małe kropki nad nimi to dwa Twoje limity: **5-godzinny** i **7-dniowy**.
 
-Po najechaniu na konkretną kropkę zobaczysz ostatnią odczytaną wartość limitu z tego momentu — czyli ile zostało Ci puli, kiedy ClaudeScope sprawdzał. Z czasem kropki układają się w krzywą rosnącą: tak właśnie wygląda Twój dzień (albo tydzień) od strony wyczerpywania limitu.
+Po najechaniu na konkretną kropkę zobaczysz ostatnią odczytaną wartość limitu z tego momentu, czyli ile zostało Ci puli, kiedy ClaudeScope sprawdzał. Z czasem kropki układają się w krzywą rosnącą. Tak właśnie wygląda Twój dzień (albo tydzień) od strony wyczerpywania limitu.
 
-Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**, **ostatni miesiąc**. Po kilku dniach używania zaczniesz widzieć własne wzorce — kiedy wpadasz w limit, w jakich godzinach pracujesz najciężej, kiedy odpuszczasz.
+Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**, **ostatni miesiąc**. Po kilku dniach używania zaczniesz widzieć własne wzorce: kiedy wpadasz w limit, w jakich godzinach pracujesz najciężej, kiedy odpuszczasz.
 
 ## Komunikaty: gdy coś idzie nie tak
 
@@ -77,7 +77,7 @@ Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole),
 To dla mnie najważniejszy punkt. ClaudeScope:
 
 - ma dostęp **wyłącznie do claude.ai**, do żadnej innej strony,
-- liczy wszystko **lokalnie w Twojej przeglądarce** — żadne dane nie wychodzą na zewnętrzny serwer,
+- liczy wszystko **lokalnie w Twojej przeglądarce**, żadne dane nie wychodzą na zewnętrzny serwer,
 - nie wymaga konta, logowania ani rejestracji.
 
 Kod jest publicznie widoczny na GitHubie. Każdy, kto się zna, może sprawdzić, że naprawdę nic nie wycieka. To nie jest open source w sensie „rób co chcesz", ale jest transparentny w sensie „możesz zobaczyć każdy bajt".
