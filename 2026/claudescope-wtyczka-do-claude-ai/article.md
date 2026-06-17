@@ -25,7 +25,7 @@ Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona d
 
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
 
-![Panel boczny ClaudeScope przyklejony do okna claude.ai|w=370](./assets/extension-mini-panel.png)
+![Panel boczny ClaudeScope przyklejony do okna claude.ai|w=670](./assets/extension-mini-panel.png)
 
 Panel jest wąski i nie zasłania rozmowy. Od góry do dołu pokazuje:
 
