@@ -81,7 +81,7 @@ Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**
 
 Wtyczka odświeża dane co kilkanaście sekund. Jeśli z jakiegoś powodu nie uda jej się pobrać aktualnych liczb, mówi o tym wprost.
 
-![Komunikat błędu na panelu bocznym|w=330](./assets/extension-error-message.png)
+![Komunikat błędu na panelu bocznym|w=400](./assets/extension-error-message.png)
 
 Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole), wtyczka próbuje połączyć się ponownie w tle, a kolor komunikatu mówi o wadze: niebieski to informacja, żółty to ostrzeżenie, czerwony to błąd. Tym samym kanałem dostajesz też powiadomienia od autora wtyczki, np. o nowych wersjach.
 
@@ -120,7 +120,7 @@ W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (
 
 Firefox powinien rozpoznać plik jako rozszerzenie i zapytać, czy chcesz je zainstalować. Potwierdź.
 
-![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=500](./assets/firefox-installation.png)
+![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=460](./assets/firefox-installation.png)
 
 Jeśli zamiast pytania o instalację paczka `.xpi` po prostu pobierze się na dysk, otwórz w Firefoxie adres `about:addons`, kliknij ikonkę koła zębatego nad listą rozszerzeń, wybierz **„Zainstaluj dodatek z pliku"** i wskaż pobrany plik `.xpi`. Efekt będzie ten sam.
 
