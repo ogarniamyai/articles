@@ -47,13 +47,13 @@ Na górze wybierasz zakres danych: **dziś**, **ostatni tydzień**, **ostatni mi
 
 ## Limity sesji: ile, do kiedy, kiedy się odnowi
 
-![Szczegółowy widok limitów sesji|w=330](./assets/extension-session-limits.png)
+![Szczegółowy widok limitów sesji|w=350](./assets/extension-session-limits.png)
 
 Sekcja **LIMITY** to to samo, co paski na panelu bocznym, tylko z konkretami: procent zużycia 5-godzinnego, procent zużycia 7-dniowego, dokładna data i godzina najbliższego resetu, czas pozostały do tego momentu. Jeśli planujesz dłuższą sesję na wieczór, jednym spojrzeniem wiesz, czy się zmieścisz.
 
 ## Subskrypcja: zanim zapłacisz znowu
 
-![Informacje o cyklu subskrypcji|w=330](./assets/extension-subscription-details.png)
+![Informacje o cyklu subskrypcji|w=350](./assets/extension-subscription-details.png)
 
 Sekcja **SUBSKRYPCJA** podaje datę odnowienia, liczbę dni do końca cyklu i status płatności. Brzmi jak drobiazg, ale potrafi uratować przed dwoma niespodziankami.
 
@@ -61,7 +61,7 @@ Pierwsza: płatność nie przejdzie, bo karta wygasła albo na koncie nie ma śr
 
 ## Peak hours: kiedy unikać ciężkich promptów
 
-![Mapa godzin szczytu w skali doby|w=330](./assets/extension-peak-hours.png)
+![Mapa godzin szczytu w skali doby|w=350](./assets/extension-peak-hours.png)
 
 Anthropic potwierdziło, że są godziny, w których ten sam prompt zżera więcej z puli. Sekcja **PEAK HOURS** rysuje rozkład doby z zaznaczonymi takimi pasmami. Zwróć uwagę, że strefy przesuwają się razem ze zmianą czasu letni/zimowy, więc wtyczka uwzględnia to po Twojej stronie.
 
@@ -69,7 +69,7 @@ Reguła jest prosta: nie chodzi o to, żeby w peak hours nie pisać. Chodzi o to
 
 ## Aktywność: jak naprawdę pracujesz z Claude'em
 
-![Wykres aktywności i zużycia|w=330](./assets/extension-usage.png)
+![Wykres aktywności i zużycia|w=350](./assets/extension-usage.png)
 
 Sekcja **AKTYWNOŚĆ** to wykres z dwiema osiami. Lewa oś pionowa to czas spędzony z Claude'em, prawa to procent wykorzystania limitów. Słupki pokazują, jak długo siedziałeś w danym przedziale czasu, a małe kropki nad nimi to dwa Twoje limity: **5-godzinny** i **7-dniowy**.
 
@@ -81,7 +81,7 @@ Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**
 
 Wtyczka odświeża dane co kilkanaście sekund. Jeśli z jakiegoś powodu nie uda jej się pobrać aktualnych liczb, mówi o tym wprost.
 
-![Komunikat błędu na panelu bocznym|w=400](./assets/extension-error-message.png)
+![Komunikat błędu na panelu bocznym|w=500](./assets/extension-error-message.png)
 
 Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole), wtyczka próbuje połączyć się ponownie w tle, a kolor komunikatu mówi o wadze: niebieski to informacja, żółty to ostrzeżenie, czerwony to błąd. Tym samym kanałem dostajesz też powiadomienia od autora wtyczki, np. o nowych wersjach.
 
