@@ -10,6 +10,19 @@ Znasz to uczucie, kiedy w połowie ważnej rozmowy z Claude'em okazuje się, że
 
 Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona do okna claude.ai i pokazuje na bieżąco, ile zostało Ci 5-godzinnego limitu, ile tygodniowego, kiedy się odnowią i czy akurat trafiłeś na godziny szczytu. W tym artykule pokażę, co dokładnie mierzy i jak to wygląda.
 
+## Spis treści
+
+- [Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu](#panel-boczny-wszystko-co-musisz-wiedzieć-w-jednym-miejscu)
+- [Prompty według modelu: gdzie kończą się Twoje zapytania](#prompty-według-modelu-gdzie-kończą-się-twoje-zapytania)
+- [Limity sesji: ile, do kiedy, kiedy się odnowi](#limity-sesji-ile-do-kiedy-kiedy-się-odnowi)
+- [Subskrypcja: zanim zapłacisz znowu](#subskrypcja-zanim-zapłacisz-znowu)
+- [Peak hours: kiedy unikać ciężkich promptów](#peak-hours-kiedy-unikać-ciężkich-promptów)
+- [Aktywność: jak naprawdę pracujesz z Claude'em](#aktywność-jak-naprawdę-pracujesz-z-claudeem)
+- [Komunikaty: gdy coś idzie nie tak](#komunikaty-gdy-coś-idzie-nie-tak)
+- [A co z prywatnością](#a-co-z-prywatnością)
+- [Jak zainstalować](#jak-zainstalować)
+- [Na koniec](#na-koniec)
+
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
 
 ![Panel boczny ClaudeScope przyklejony do okna claude.ai](./assets/extension-mini-panel.png)
@@ -72,7 +85,7 @@ Wtyczka odświeża dane co kilkanaście sekund. Jeśli z jakiegoś powodu nie ud
 
 Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole), wtyczka próbuje połączyć się ponownie w tle, a kolor komunikatu mówi o wadze: niebieski to informacja, żółty to ostrzeżenie, czerwony to błąd. Tym samym kanałem dostajesz też powiadomienia od autora wtyczki, np. o nowych wersjach.
 
-## A co z prywatnością
+## Prywatność
 
 To dla mnie najważniejszy punkt. ClaudeScope:
 
@@ -82,10 +95,41 @@ To dla mnie najważniejszy punkt. ClaudeScope:
 
 Uprawnienia, które wtyczka deklaruje przy instalacji, są dokładnie tym, co opisałem powyżej. Możesz je sprawdzić w ustawieniach przeglądarki w każdej chwili.
 
-## Jak zainstalować
+## Instalacja
 
-Wtyczka czeka właśnie na weryfikację w Chrome Web Store i w Firefox Add-ons. Jak tylko zostanie zatwierdzona, dopiszę tutaj linki do oficjalnych instalatorów.
+Najpierw jedno zastrzeżenie: ClaudeScope to wtyczka **wyłącznie do przeglądarki**. Nie działa w aplikacji desktopowej Claude'a zainstalowanej na komputerze, ani w aplikacji mobilnej. Wtyczka nie ingeruje też w żaden sposób w kod aplikacji dostarczanej przez Anthropic, tylko czyta dane, które i tak Twoja przeglądarka pobiera z claude.ai.
+
+### Chrome i przeglądarki Chromium (Edge, Brave, Opera, Vivaldi, Arc)
+
+Dla użytkowników Chrome'a i wszystkich przeglądarek opartych na Chromium (Microsoft Edge, Brave, Opera, Vivaldi, Arc) wtyczka przeszła weryfikację w **Chrome Web Store**, czyli oficjalnym sklepie wtyczek Google. Znajdziesz ją pod tym linkiem:
+
+[ClaudeScope w Chrome Web Store](https://chromewebstore.google.com/detail/bghocpfpcbbmodnhlcddihdalgekpdaa)
+
+Wystarczy kliknąć **„Dodaj do Chrome"**, a następnie wejść na [claude.ai](https://claude.ai) (lub odświeżyć istniejące okno rozmowy z Claude'em). W ciągu kilkudziesięciu sekund wtyczka załaduje dane dotyczące Twojego konta i panel boczny pojawi się przy oknie rozmowy.
+
+### Firefox i przeglądarki pochodne
+
+W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (czeka na weryfikację). Na ten moment zainstalujesz ją ręcznie z paczki wydanej na GitHubie:
+
+1. Wejdź na stronę wydań: [github.com/ogarniamyai/claudescope/releases](https://github.com/ogarniamyai/claudescope/releases).
+2. Wybierz najnowsze wydanie oznaczone etykietą **„Latest"**.
+
+![Strona wydań ClaudeScope na GitHubie z zaznaczonym najnowszym wydaniem](./assets/github-release.png)
+
+3. Kliknij plik `claudescope-firefox-<wersja>.xpi`. **Uważaj, żeby nie pomylić go z plikiem `source.xpi`** – ten drugi to tylko kod źródłowy, nie instalator.
+
+Firefox powinien rozpoznać plik jako rozszerzenie i zapytać, czy chcesz je zainstalować. Potwierdź.
+
+![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope](./assets/firefox-installation.png)
+
+Jeśli zamiast pytania o instalację paczka `.xpi` po prostu pobierze się na dysk, otwórz w Firefoxie adres `about:addons`, kliknij ikonkę koła zębatego nad listą rozszerzeń, wybierz **„Zainstaluj dodatek z pliku"** i wskaż pobrany plik `.xpi`. Efekt będzie ten sam.
+
+Po instalacji (niezależnie od przeglądarki) wejdź na [claude.ai](https://claude.ai) lub odśwież istniejącą kartę z rozmową. Panel ClaudeScope powinien pojawić się przy oknie w ciągu kilkudziesięciu sekund.
+
+### Safari
+
+Na ten moment ClaudeScope **nie wspiera Safari**. Powód jest prozaiczny: żeby udostępnić wtyczkę użytkownikom Safari w przystępny sposób (czyli oficjalną drogą przez App Store), trzeba opłacić konto developerskie Apple - 100 dolarów rocznie. Jeśli zainteresowanie będzie większe, wrócę do tematu w przyszłości.
 
 ## Na koniec
 
-Tyle. Zainstaluj, popatrz przez kilka dni, zobacz własne wzorce zużycia limitu. Miłego użytkowania i mądrego wykorzystywania swoich limitów.
+To tyle. Zainstaluj, popatrz przez kilka dni, zobacz własne wzorce zużycia limitu. Miłego użytkowania i mądrego wykorzystywania swoich limitów.
