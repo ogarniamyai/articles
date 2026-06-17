@@ -111,7 +111,7 @@ Wystarczy kliknąć **„Dodaj do Chrome"**, a następnie wejść na [claude.ai]
 
 W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (czeka na weryfikację). Na ten moment zainstalujesz ją ręcznie z paczki wydanej na GitHubie:
 
-1. Wejdź na stronę wydań: [github.com/ogarniamyai/claudescope/releases](https://github.com/ogarniamyai/claudescope/releases).
+1. Wejdź na stronę wydań: [GitHub Releases](https://github.com/ogarniamyai/claudescope/releases).
 2. Wybierz najnowsze wydanie oznaczone etykietą **„Latest"**.
 
 ![Strona wydań ClaudeScope na GitHubie z zaznaczonym najnowszym wydaniem](./assets/github-release.png)
