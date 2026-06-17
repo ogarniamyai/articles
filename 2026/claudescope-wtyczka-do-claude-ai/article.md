@@ -25,7 +25,7 @@ Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona d
 
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
 
-![Panel boczny ClaudeScope przyklejony do okna claude.ai|w=340](./assets/extension-mini-panel.png)
+![Panel boczny ClaudeScope przyklejony do okna claude.ai|w=370](./assets/extension-mini-panel.png)
 
 Panel jest wąski i nie zasłania rozmowy. Od góry do dołu pokazuje:
 
@@ -39,7 +39,7 @@ Panel jest wąski i nie zasłania rozmowy. Od góry do dołu pokazuje:
 
 ## Prompty według modelu: gdzie kończą się Twoje zapytania
 
-![Rozkład promptów między modelami Claude|w=260](./assets/extension-prompts-per-model.png)
+![Rozkład promptów między modelami Claude|w=290](./assets/extension-prompts-per-model.png)
 
 Pierwsza sekcja panelu szczegółowego pokazuje, ile procent Twoich promptów poszło do Opusa, ile do Sonneta, ile do Haiku. Brzmi jak ciekawostka, ale uczy konkretu: jeśli 80% Twoich zapytań to proste pytania, a wszystkie idą do Opusa, to marnujesz limit. Sonnet zrobi to samo i taniej.
 
@@ -47,13 +47,13 @@ Na górze wybierasz zakres danych: **dziś**, **ostatni tydzień**, **ostatni mi
 
 ## Limity sesji: ile, do kiedy, kiedy się odnowi
 
-![Szczegółowy widok limitów sesji|w=260](./assets/extension-session-limits.png)
+![Szczegółowy widok limitów sesji|w=290](./assets/extension-session-limits.png)
 
 Sekcja **LIMITY** to to samo, co paski na panelu bocznym, tylko z konkretami: procent zużycia 5-godzinnego, procent zużycia 7-dniowego, dokładna data i godzina najbliższego resetu, czas pozostały do tego momentu. Jeśli planujesz dłuższą sesję na wieczór, jednym spojrzeniem wiesz, czy się zmieścisz.
 
 ## Subskrypcja: zanim zapłacisz znowu
 
-![Informacje o cyklu subskrypcji|w=260](./assets/extension-subscription-details.png)
+![Informacje o cyklu subskrypcji|w=290](./assets/extension-subscription-details.png)
 
 Sekcja **SUBSKRYPCJA** podaje datę odnowienia, liczbę dni do końca cyklu i status płatności. Brzmi jak drobiazg, ale potrafi uratować przed dwoma niespodziankami.
 
@@ -61,7 +61,7 @@ Pierwsza: płatność nie przejdzie, bo karta wygasła albo na koncie nie ma śr
 
 ## Peak hours: kiedy unikać ciężkich promptów
 
-![Mapa godzin szczytu w skali doby|w=260](./assets/extension-peak-hours.png)
+![Mapa godzin szczytu w skali doby|w=290](./assets/extension-peak-hours.png)
 
 Anthropic potwierdziło, że są godziny, w których ten sam prompt zżera więcej z puli. Sekcja **PEAK HOURS** rysuje rozkład doby z zaznaczonymi takimi pasmami. Zwróć uwagę, że strefy przesuwają się razem ze zmianą czasu letni/zimowy, więc wtyczka uwzględnia to po Twojej stronie.
 
@@ -69,7 +69,7 @@ Reguła jest prosta: nie chodzi o to, żeby w peak hours nie pisać. Chodzi o to
 
 ## Aktywność: jak naprawdę pracujesz z Claude'em
 
-![Wykres aktywności i zużycia|w=260](./assets/extension-usage.png)
+![Wykres aktywności i zużycia|w=290](./assets/extension-usage.png)
 
 Sekcja **AKTYWNOŚĆ** to wykres z dwiema osiami. Lewa oś pionowa to czas spędzony z Claude'em, prawa to procent wykorzystania limitów. Słupki pokazują, jak długo siedziałeś w danym przedziale czasu, a małe kropki nad nimi to dwa Twoje limity: **5-godzinny** i **7-dniowy**.
 
@@ -81,7 +81,7 @@ Nad wykresem masz przełącznik na trzy zakresy: **dziś**, **ostatni tydzień**
 
 Wtyczka odświeża dane co kilkanaście sekund. Jeśli z jakiegoś powodu nie uda jej się pobrać aktualnych liczb, mówi o tym wprost.
 
-![Komunikat błędu na panelu bocznym|w=330](./assets/extension-error-message.png)
+![Komunikat błędu na panelu bocznym|w=360](./assets/extension-error-message.png)
 
 Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole), wtyczka próbuje połączyć się ponownie w tle, a kolor komunikatu mówi o wadze: niebieski to informacja, żółty to ostrzeżenie, czerwony to błąd. Tym samym kanałem dostajesz też powiadomienia od autora wtyczki, np. o nowych wersjach.
 
@@ -120,7 +120,7 @@ W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (
 
 Firefox powinien rozpoznać plik jako rozszerzenie i zapytać, czy chcesz je zainstalować. Potwierdź.
 
-![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=280](./assets/firefox-installation.png)
+![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=310](./assets/firefox-installation.png)
 
 Jeśli zamiast pytania o instalację paczka `.xpi` po prostu pobierze się na dysk, otwórz w Firefoxie adres `about:addons`, kliknij ikonkę koła zębatego nad listą rozszerzeń, wybierz **„Zainstaluj dodatek z pliku"** i wskaż pobrany plik `.xpi`. Efekt będzie ten sam.
 
