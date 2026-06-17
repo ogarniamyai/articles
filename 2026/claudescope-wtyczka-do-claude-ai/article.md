@@ -120,7 +120,7 @@ W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (
 
 Firefox powinien rozpoznać plik jako rozszerzenie i zapytać, czy chcesz je zainstalować. Potwierdź.
 
-![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=330](./assets/firefox-installation.png)
+![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=530](./assets/firefox-installation.png)
 
 Jeśli zamiast pytania o instalację paczka `.xpi` po prostu pobierze się na dysk, otwórz w Firefoxie adres `about:addons`, kliknij ikonkę koła zębatego nad listą rozszerzeń, wybierz **„Zainstaluj dodatek z pliku"** i wskaż pobrany plik `.xpi`. Efekt będzie ten sam.
 
