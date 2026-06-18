@@ -19,7 +19,7 @@ Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona d
 - [Peak hours: kiedy unikać ciężkich promptów](#peak-hours-kiedy-unikać-ciężkich-promptów)
 - [Aktywność: jak naprawdę pracujesz z Claude'em](#aktywność-jak-naprawdę-pracujesz-z-claudeem)
 - [Komunikaty: gdy coś idzie nie tak](#komunikaty-gdy-coś-idzie-nie-tak)
-- [A co z prywatnością](#a-co-z-prywatnością)
+- [Prywatność i bezpieczeństwo](#prywatność-i-bezpieczeństwo)
 - [Jak zainstalować](#jak-zainstalować)
 - [Na koniec](#na-koniec)
 
@@ -85,7 +85,7 @@ Wtyczka odświeża dane co kilkanaście sekund. Jeśli z jakiegoś powodu nie ud
 
 Ostatnia znana wartość zostaje na ekranie (żebyś nie patrzył w puste pole), wtyczka próbuje połączyć się ponownie w tle, a kolor komunikatu mówi o wadze: niebieski to informacja, żółty to ostrzeżenie, czerwony to błąd. Tym samym kanałem dostajesz też powiadomienia od autora wtyczki, np. o nowych wersjach.
 
-## Prywatność
+## Prywatność i bezpieczeństwo
 
 To dla mnie najważniejszy punkt. ClaudeScope:
 
@@ -94,6 +94,8 @@ To dla mnie najważniejszy punkt. ClaudeScope:
 - nie wymaga konta, logowania ani rejestracji.
 
 Uprawnienia, które wtyczka deklaruje przy instalacji, są dokładnie tym, co opisałem powyżej. Możesz je sprawdzić w ustawieniach przeglądarki w każdej chwili.
+
+Sam kod wtyczki też nie jest „weź na słowo". ClaudeScope przeszła oficjalną weryfikację zarówno w **Chrome Web Store**, jak i w **Mozilla Add-ons**. Oba sklepy prowadzą surowy proces audytu bezpieczeństwa: sprawdzają, jakie uprawnienia rozszerzenie naprawdę wykorzystuje, czy nie wysyła danych w nieoczywiste miejsca, czy kod nie zawiera obfuskacji ani podejrzanych zewnętrznych zależności. Dopiero rozszerzenie, które przejdzie ten audyt, trafia do sklepu z zielonym światłem.
 
 ## Instalacja
 
@@ -109,22 +111,11 @@ Wystarczy kliknąć **„Dodaj do Chrome"**, a następnie wejść na [claude.ai]
 
 ### Firefox i przeglądarki pochodne
 
-W Firefoksie wtyczka będzie dostępna w **Mozilla Add-ons** trochę później (czeka na weryfikację). Na ten moment zainstalujesz ją ręcznie z paczki wydanej na GitHubie:
+Dla użytkowników Firefoxa wtyczka przeszła weryfikację w **Mozilla Add-ons**, czyli oficjalnym sklepie dodatków Mozilli. Znajdziesz ją pod tym linkiem:
 
-1. Wejdź na stronę wydań: [GitHub Releases](https://github.com/ogarniamyai/claudescope/releases).
-2. Wybierz najnowsze wydanie oznaczone etykietą **„Latest"**.
+[ClaudeScope w Mozilla Add-ons](https://addons.mozilla.org/pl/firefox/addon/claudescope/)
 
-![Strona wydań ClaudeScope na GitHubie z zaznaczonym najnowszym wydaniem](./assets/github-release.png)
-
-3. Kliknij plik `claudescope-firefox-<wersja>.xpi`. **Uważaj, żeby nie pomylić go z plikiem `source.xpi`** – ten drugi to tylko kod źródłowy, nie instalator.
-
-Firefox powinien rozpoznać plik jako rozszerzenie i zapytać, czy chcesz je zainstalować. Potwierdź.
-
-![Okno Firefoxa z pytaniem o instalację rozszerzenia ClaudeScope|w=460](./assets/firefox-installation.png)
-
-Jeśli zamiast pytania o instalację paczka `.xpi` po prostu pobierze się na dysk, otwórz w Firefoxie adres `about:addons`, kliknij ikonkę koła zębatego nad listą rozszerzeń, wybierz **„Zainstaluj dodatek z pliku"** i wskaż pobrany plik `.xpi`. Efekt będzie ten sam.
-
-Po instalacji (niezależnie od przeglądarki) wejdź na [claude.ai](https://claude.ai) lub odśwież istniejącą kartę z rozmową. Panel ClaudeScope powinien pojawić się przy oknie w ciągu kilkudziesięciu sekund.
+Wystarczy kliknąć **„Dodaj do Firefoksa"**, a następnie wejść na [claude.ai](https://claude.ai) (lub odświeżyć istniejące okno rozmowy z Claude'em). W ciągu kilkudziesięciu sekund wtyczka załaduje dane dotyczące Twojego konta i panel boczny pojawi się przy oknie rozmowy.
 
 ### Safari
 
