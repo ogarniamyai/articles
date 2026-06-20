@@ -1,24 +1,24 @@
 ---
 slug: "strona-na-github-pages-z-ai"
-title: "Zrób własną stronę-wizytówkę na GitHub Pages z pomocą AI"
-excerpt: "Pokażę Ci, jak Claude napisze całą stronę i wgra ją do Twojego repozytorium. Bez programistów, bez kodowania, bez kosztów."
+title: "Zrób własną stronę na GitHub Pages z pomocą AI"
+excerpt: "Pokażę Ci, jak za pomocą Claude stworzyć własną stronę i udostępnić ją w sieci. Bez programistów, bez kodowania, bez kosztów."
 cover: "./assets/cover.jpg"
 category: "Automatyzacja"
 ---
 
-Internet stoi otworem dla każdego, ale wielu ludzi nadal myśli, że własna strona to projekt na tygodnie, programista i miesięczne opłaty za hosting. To nieprawda. W tym artykule pokażę Ci, jak w jeden wieczór zrobić sobie stronę-wizytówkę, która naprawdę robi wrażenie, bez pisania kodu i bez wydania ani złotówki.
+Internet stoi otworem dla każdego, ale wielu ludzi nadal myśli, że własna strona to projekt na tygodnie, programista i opłaty za hosting. To nieprawda. W tym artykule pokażę Ci, jak w jeden wieczór zrobić sobie stronę-wizytówkę, która naprawdę robi wrażenie, bez pisania kodu i bez wydania ani złotówki.
 
-Cała sztuczka opiera się na dwóch narzędziach. AI (Claude), który napisze za nas plik strony. I GitHub Pages, który ją darmowo opublikuje pod ładnym adresem. Dzięki łącznikowi do GitHuba (tzw. MCP connector) Claude wgra gotowy plik strony bezpośrednio do Twojego repozytorium, bez ściągania go na dysk i ręcznego uploadu. Samo repozytorium i opcję GitHub Pages włączasz sam w dwóch minutach klikania, pokażę niżej.
+Cała sztuczka opiera się na dwóch narzędziach. AI (Claude), który napisze za nas plik strony. I GitHub Pages, który ją darmowo opublikuje pod ładnym adresem. Dzięki integracji do GitHuba (tzw. MCP connector) Claude wgra gotowy plik strony bezpośrednio do Twojego repozytorium, bez ściągania go na dysk i ręcznego uploadu. Samo repozytorium i opcję GitHub Pages włączasz sam w kilku minutach klikania.
 
 ## Co dostaniesz na koniec
 
-Stronę w jednym pliku `index.html`, z wbudowanymi animacjami, sekcjami i responsywnością na telefon. Bez logowania, bez backendu, bez bazy danych. Czysta, szybka strona, którą sam potem edytujesz.
+Stronę z wbudowanymi animacjami, sekcjami i responsywnością na telefon. Bez logowania, bez backendu, bez bazy danych. Czysta, szybka strona, którą sam potem edytujesz z Claude.
 
 Strona będzie dostępna pod adresem `https://<twojlogin>.github.io`, gdzie `<twojlogin>` to dokładnie nazwa Twojego konta na GitHubie. To ważne, bo Twój login z GitHuba pojawi się w adresie strony. Login wybierasz przy zakładaniu konta, ale możesz go zmienić później w `Settings → Account → Change username` (zmiana przepisuje też adres strony). Jeśli planujesz stronę firmową, warto już na starcie założyć konto pod nazwą firmy.
 
-Jeśli wolisz własny, „prawdziwy" adres typu `firmaxyz.pl`, da się go podpiąć później pod tę samą stronę za pomocą opcji **Custom domain** w ustawieniach repozytorium. Strona dalej będzie hostowana za darmo na GitHubie, ale wyświetli się pod Twoją domeną. Pokażę to na końcu artykułu.
+Jeśli wolisz własny, „prawdziwy" adres typu `firmaxyz.pl`, da się go podpiąć później pod tę samą stronę za pomocą opcji **Custom domain** w ustawieniach repozytorium. Strona dalej będzie hostowana za darmo na GitHubie, ale wyświetli się pod Twoją domeną. Napiszę pod to osobny artykuł.
 
-Nie ma znaczenia, czy robisz wizytówkę firmy, portfolio, stronę projektu czy zaproszenie na ślub. Schemat jest dokładnie ten sam.
+Nie ma znaczenia, czy robisz wizytówkę firmy, portfolio, stronę projektu czy menu restauracji. Schemat jest dokładnie ten sam.
 
 ## Co musisz mieć
 
@@ -28,15 +28,13 @@ Trzy rzeczy, wszystkie darmowe:
 - Konto w **Claude** (claude.ai, wystarczy plan darmowy).
 - Pomysł na to, co ma być na stronie.
 
-Żadnych instalacji, żadnego edytora kodu, żadnej karty kredytowej.
+## Podłącz Claude do GitHuba
 
-## Setup jednorazowy: podłącz Claude do GitHuba
-
-To robisz raz w życiu. Potem już zapominasz o tym kroku i przy każdej kolejnej stronie zaczynasz od razu od opisywania pomysłu.
+To robisz raz. Potem już zapominasz o tym kroku i przy każdej kolejnej stronie zaczynasz od razu od opisywania pomysłu.
 
 ### 1. Zainstaluj aplikację Claude GitHub MCP Connector
 
-Wejdź na GitHuba do swojego profilu i znajdź aplikację `Claude Github MCP Connector` (lub kliknij link z dokumentacji Claude). Kliknij **Install**.
+Wejdź na adres `https://github.com/apps/claude-github-mcp-connector` (alternatywnie wpisz „Claude GitHub MCP Connector" w wyszukiwarkę GitHub Apps). Kliknij **Install**.
 
 ![Strona aplikacji Claude GitHub MCP Connector w GitHub Apps](./assets/01-connector-strona.png)
 
@@ -46,7 +44,7 @@ GitHub zapyta, do których repozytoriów dać Claude dostęp. Najwygodniej wybra
 
 ![Ekran autoryzacji GitHub z wyborem repozytoriów](./assets/02-autoryzacja-github.png)
 
-Po kliknięciu **Install & Authorize** zobaczysz aplikację na liście zainstalowanych w sekcji *Applications* w ustawieniach GitHuba.
+Po kliknięciu **Install & Authorize** zobaczysz aplikację na liście zainstalowanych. Sprawdzisz to klikając w ikonę swojego profilu w prawym górnym rogu GitHuba, potem **Settings → Applications**. Connector powinien być na liście **Installed GitHub Apps**.
 
 ![Lista zainstalowanych aplikacji GitHub z widocznym Claude GitHub MCP Connector](./assets/03-zainstalowane-aplikacje.png)
 
@@ -58,23 +56,25 @@ W okienku, które się otworzy, wpisz nazwę (np. `github-mcp-connector`) i adre
 
 ![Modal dodawania własnego connectora w Claude z polem na URL serwera MCP](./assets/05-dodaj-connector-modal.png)
 
-Klikasz **Add**. Connector pojawi się na liście Twoich connectorów po lewej stronie.
+Klikasz **Add**. Connector pojawi się na liście Twoich connectorów w Claude.
 
 ![Panel Connectors w Claude z dodanym Github CUSTOM](./assets/04-connectors-panel.png)
 
 ### 4. Ustaw uprawnienia narzędzi
 
-Otwórz dodany connector. Zobaczysz dwie grupy uprawnień. **Read-only tools** (czytanie repozytoriów) i **Write/delete tools** (commitowanie i edycja plików). Te drugie ustaw na **Always allow**, żeby Claude mógł wgrywać i poprawiać pliki w Twoim repozytorium bez pytania o zgodę przy każdej operacji.
+Otwórz dodany connector. Zobaczysz dwie grupy uprawnień. **Read-only tools** (czytanie repozytoriów) i **Write/delete tools** (commitowanie i edycja plików). Oba ustaw na **Always allow**, żeby Claude mógł wgrywać i poprawiać pliki w Twoim repozytorium bez pytania o zgodę przy każdej operacji.
 
 ![Ustawienie uprawnień narzędzi w connector Github, czytanie i pisanie](./assets/06-uprawnienia-narzedzi.png)
 
 ### 5. Włącz connector w okienku rozmowy
 
-Connector jest dodany, ale trzeba go jeszcze włączyć w danym czacie. W oknie rozmowy z Claude kliknij przycisk **+** po lewej stronie pola tekstowego. W menu wybierz **Connectors**, a potem przełącz **Github** na ON.
+Connector jest dodany, ale czasami trzeba go jeszcze ręcznie włączyć w danym czacie. W oknie rozmowy z Claude kliknij przycisk **+** po lewej stronie pola tekstowego. W menu wybierz **Connectors**, a potem przełącz **Github** na ON.
 
 ![Menu plus w Claude z włączonym connectorem Github](./assets/07-wlacz-w-czacie.png)
 
-Od tej chwili Claude widzi Twoje repozytoria i może wgrywać do nich pliki bezpośrednio z czatu. Nie utworzy za Ciebie nowego repo ani nie włączy GitHub Pages, to robisz raz, ręcznie, w następnym kroku.
+Od tej chwili Claude widzi Twoje repozytoria i może wgrywać do nich pliki bezpośrednio z czatu.
+
+> **Ważne, czego Claude NIE zrobi.** Connector pozwala wgrywać i edytować pliki w istniejących repozytoriach, ale Claude **nie utworzy za Ciebie nowego repo** ani **nie włączy GitHub Pages**. Te dwie rzeczy musisz zrobić ręcznie w przeglądarce. To prosta klikanka, dokładnie pokażę ją w Kroku 3.
 
 ## Krok 1. Zacznij od pomysłu, nie od narzędzi
 
@@ -112,7 +112,9 @@ Na GitHubie kliknij `+` w prawym górnym rogu i wybierz **New repository**.
 
 ![Dashboard GitHuba z otwartym menu New repository](./assets/08-github-dashboard.png)
 
-W polu nazwy wpisz `twojlogin.github.io`, gdzie `twojlogin` to dokładnie Twój login z GitHuba. Np. jeśli logujesz się jako `kowalski`, repozytorium nazwij `kowalski.github.io`. Ta nazwa to nie kosmetyka, tylko twardy warunek GitHuba: tylko repo o nazwie `<login>.github.io` jest publikowane pod głównym adresem `https://twojlogin.github.io`. Jeśli nazwiesz repo inaczej (np. `moja-strona`), strona też się opublikuje, ale pod ścieżką `https://twojlogin.github.io/moja-strona`, czyli z dopiskiem nazwy repo na końcu. Zaznacz **Public** i kliknij **Create repository**. Resztę pól zostaw pustą, Claude wypełni je za chwilę.
+W polu nazwy wpisz `twojlogin.github.io`, gdzie `twojlogin` to dokładnie Twój login z GitHuba. Np. jeśli logujesz się jako `kowalski`, repozytorium nazwij `kowalski.github.io`. Ta nazwa to nie kosmetyka, tylko twardy warunek GitHuba: tylko repo o nazwie `<login>.github.io` jest publikowane pod głównym adresem `https://twojlogin.github.io`. Jeśli nazwiesz repo inaczej (np. `moja-strona`), strona też się opublikuje, ale pod ścieżką `https://twojlogin.github.io/moja-strona`, czyli z dopiskiem nazwy repo na końcu.
+
+Ustaw widoczność na **Public**, inaczej GitHub Pages nie opublikuje strony (w planie darmowym). Zaznacz też **Add a README file** — repo musi mieć w sobie chociaż jeden commit, żeby GitHub Pages dało się włączyć w następnym kroku. README to ten jeden commit. Resztę pól zostaw bez zmian i kliknij **Create repository**.
 
 ![Formularz tworzenia nowego repozytorium na GitHubie z nazwą twojlogin.github.io](./assets/09-tworzenie-repo.png)
 
@@ -126,11 +128,11 @@ Repozytorium jest jeszcze puste, ale GitHub wie już, że ma publikować jego za
 
 > **Wskazówka, jeśli planujesz użyć własnych zdjęć.** Claude wgrywa pliki przez MCP w postaci tekstu (base64), więc przy większych obrazkach (powyżej ~1 MB) potrafi się zaciąć lub odmówić uploadu. Najwygodniej jest wrzucić takie zdjęcia ręcznie. W repozytorium kliknij **Add file → Upload files**, przeciągnij obrazki do folderu (np. `assets/`) i daj **Commit changes**. Potem w briefie po prostu napisz Claude, że obrazki są już w repo pod ścieżkami `assets/nazwa.jpg` i ma się do nich odwołać w `index.html`.
 
-## Krok 4. Skopiuj mój gotowy brief jako szablon
+## Krok 4. Przykład dobrego briefu, wzoruj się
 
-Poniżej jest dokładny brief, którego sam użyłem, żeby zrobić demo strony fikcyjnej polskiej firmy kosmicznej „ORBITON". Możesz go potraktować jak szablon, podmienić nazwę firmy, branżę, sekcje i kolory pod siebie. Reszta zostanie nienaruszona i nadal zadziała.
+Poniżej jest dokładny brief, którego sam użyłem, żeby zrobić demo strony fikcyjnej polskiej firmy kosmicznej „ORBITON". Nie kopiuj go w ciemno, to nie szablon do podmiany pól. To przykład pokazujący, **jakiej głębi opisu Claude potrzebuje**, żeby zwrócić stronę z charakterem, a nie generyczny landing.
 
-> Wklej poniższy tekst do Claude jako jedną wiadomość. Nic nie zmieniaj w strukturze, tylko podmień treści pod swoją stronę.
+Zobacz, jak rozpisane są sekcje, jak konkretne są kolory, animacje i teksty. Im więcej takich detali damy w swoim briefie pod swoją branżę i pomysł, tym bliżej będzie do efektu „wow" od pierwszego strzału.
 
 ```
 Stwórz kompletną, jednostronicową stronę-wizytówkę i wgraj ją do
@@ -271,7 +273,7 @@ Na koniec daj mi gotowy link do strony.
 
 ## Krok 5. Wyślij brief do Claude i pozwól mu pracować
 
-Po wysłaniu tej wiadomości Claude robi resztę sam. Generuje plik `index.html` i wgrywa go bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś w kroku 3, sam zauważy nowy plik i opublikuje stronę.
+Po wysłaniu prompta, Claude robi resztę sam. Generuje plik `index.html` i wgrywa go bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś w kroku 3, sam zauważy nowy plik i opublikuje stronę.
 
 Z poziomu rozmowy widzisz każdy krok i jeśli czegoś nie zaakceptujesz, możesz powiedzieć „cofnij" albo „popraw". Cały proces trwa zazwyczaj kilka minut.
 
