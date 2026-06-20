@@ -10,6 +10,18 @@ Internet stoi otworem dla każdego, ale wielu ludzi nadal myśli, że własna st
 
 Cała sztuczka opiera się na dwóch narzędziach. AI (Claude), który napisze za nas plik strony. I GitHub Pages, który ją darmowo opublikuje pod ładnym adresem. Dzięki integracji do GitHuba (tzw. MCP connector) Claude wgra gotowy plik strony bezpośrednio do Twojego repozytorium, bez ściągania go na dysk i ręcznego uploadu. Samo repozytorium i opcję GitHub Pages włączasz sam w kilku minutach klikania.
 
+## Spis treści
+
+- [Co dostaniesz na koniec](#co-dostaniesz-na-koniec)
+- [Co musisz mieć](#co-musisz-mieć)
+- [Podłącz Claude do GitHuba](#podłącz-claude-do-githuba)
+- [Załóż repozytorium i włącz GitHub Pages](#załóż-repozytorium-i-włącz-github-pages)
+- [Zacznij od pomysłu, nie od narzędzi](#zacznij-od-pomysłu-nie-od-narzędzi)
+- [Napisz porządny brief dla AI](#napisz-porządny-brief-dla-ai)
+- [Przykład dobrego briefu, wzoruj się](#przykład-dobrego-briefu-wzoruj-się)
+- [Wyślij brief do Claude i pozwól mu pracować](#wyślij-brief-do-claude-i-pozwól-mu-pracować)
+- [Co dalej](#co-dalej)
+
 ## Co dostaniesz na koniec
 
 Stronę z wbudowanymi animacjami, sekcjami i responsywnością na telefon. Bez logowania, bez backendu, bez bazy danych. Czysta, szybka strona, którą sam potem edytujesz z Claude.
@@ -74,37 +86,11 @@ Connector jest dodany, ale czasami trzeba go jeszcze ręcznie włączyć w danym
 
 Od tej chwili Claude widzi Twoje repozytoria i może wgrywać do nich pliki bezpośrednio z czatu.
 
-> **Ważne, czego Claude NIE zrobi.** Connector pozwala wgrywać i edytować pliki w istniejących repozytoriach, ale Claude **nie utworzy za Ciebie nowego repo** ani **nie włączy GitHub Pages**. Te dwie rzeczy musisz zrobić ręcznie w przeglądarce. To prosta klikanka, dokładnie pokażę ją w Kroku 3.
+> **Ważne, czego Claude NIE zrobi.** Connector pozwala wgrywać i edytować pliki w istniejących repozytoriach, ale Claude **nie utworzy za Ciebie nowego repo** ani **nie włączy GitHub Pages**. Te dwie rzeczy musisz zrobić ręcznie w przeglądarce. To prosta klikanka, dokładnie pokażę ją niżej.
 
-## Krok 1. Zacznij od pomysłu, nie od narzędzi
+## Załóż repozytorium i włącz GitHub Pages
 
-Najczęstszy błąd to otworzyć Claude z pustą głową i napisać „zrób mi stronę". Wynik będzie generyczny i bez duszy.
-
-Zanim cokolwiek napiszesz, odpowiedz sobie na cztery pytania.
-
-- **Czyja to strona i o czym jest?** (np. „polska firma kosmiczna budująca rakiety")
-- **Jakie wrażenie ma robić?** (poważne, ciepłe, futurystyczne, minimalistyczne?)
-- **Co ma być na stronie?** (sekcja powitalna, statystyki, oferta, kontakt?)
-- **Jaki ton i jakie kolory?** (czerń i niebieski, pastele, klasyczna biel?)
-
-Im konkretniej odpowiesz, tym lepszy będzie efekt. Claude nie czyta w myślach, daje to, co opiszesz.
-
-## Krok 2. Napisz porządny brief dla AI
-
-Brief to taki „opis projektu", który wklejasz w okno czatu. Dobry brief ma kilka stałych sekcji.
-
-- **Cel i klimat**, kto, dla kogo, jakie wrażenie.
-- **Kolory**, najlepiej konkretne kody (np. `#3B82F6`). Claude sam dobiera dobrze, ale jak narzucisz paletę, wynik jest bardziej spójny.
-- **Czcionki**, wystarczy podać nazwy z Google Fonts (np. „Inter", „Space Grotesk").
-- **Sekcje strony**, wymień je po kolei z konkretnymi tekstami do umieszczenia.
-- **Animacje i detale**, co ma się ruszać, świecić, pojawiać przy przewijaniu.
-- **Wymagania techniczne**, np. „wszystko w jednym pliku index.html, responsywne, bez ciężkich bibliotek".
-
-Brzmi dużo? Spokojnie, niżej masz gotowy wzór do skopiowania.
-
-## Krok 3. Załóż repozytorium i włącz GitHub Pages
-
-Zanim wyślesz brief do Claude, musisz mieć przygotowane miejsce, do którego on wgra plik strony. To dwa krótkie kliknięcia po stronie GitHuba.
+Zanim zaczniesz pisać brief do Claude, musisz mieć przygotowane miejsce, do którego on wgra plik strony. To dwa krótkie kliknięcia po stronie GitHuba.
 
 ### Utwórz nowe repozytorium
 
@@ -124,11 +110,37 @@ W świeżo utworzonym repozytorium przejdź do zakładki **Settings**, a w menu 
 
 ![Ustawienia Pages w repozytorium z wybranym branchem main i folderem root](./assets/10-pages-settings.png)
 
-Repozytorium jest jeszcze puste, ale GitHub wie już, że ma publikować jego zawartość pod adresem `https://twojlogin.github.io`. Plik wleci tam za chwilę z Claude.
+Repozytorium jest jeszcze puste (poza README), ale GitHub wie już, że ma publikować jego zawartość pod adresem `https://twojlogin.github.io`. Plik strony wleci tam za chwilę z Claude.
 
 > **Wskazówka, jeśli planujesz użyć własnych zdjęć.** Claude wgrywa pliki przez MCP w postaci tekstu (base64), więc przy większych obrazkach (powyżej ~1 MB) potrafi się zaciąć lub odmówić uploadu. Najwygodniej jest wrzucić takie zdjęcia ręcznie. W repozytorium kliknij **Add file → Upload files**, przeciągnij obrazki do folderu (np. `assets/`) i daj **Commit changes**. Potem w briefie po prostu napisz Claude, że obrazki są już w repo pod ścieżkami `assets/nazwa.jpg` i ma się do nich odwołać w `index.html`.
 
-## Krok 4. Przykład dobrego briefu, wzoruj się
+## Zacznij od pomysłu, nie od narzędzi
+
+Najczęstszy błąd to otworzyć Claude z pustą głową i napisać „zrób mi stronę". Wynik będzie generyczny i bez duszy.
+
+Zanim cokolwiek napiszesz, odpowiedz sobie na cztery pytania.
+
+- **Czyja to strona i o czym jest?** (np. „polska firma kosmiczna budująca rakiety")
+- **Jakie wrażenie ma robić?** (poważne, ciepłe, futurystyczne, minimalistyczne?)
+- **Co ma być na stronie?** (sekcja powitalna, statystyki, oferta, kontakt?)
+- **Jaki ton i jakie kolory?** (czerń i niebieski, pastele, klasyczna biel?)
+
+Im konkretniej odpowiesz, tym lepszy będzie efekt. Claude nie czyta w myślach, daje to, co opiszesz.
+
+## Napisz porządny brief dla AI
+
+Brief to taki „opis projektu", który wklejasz w okno czatu. Dobry brief ma kilka stałych sekcji.
+
+- **Cel i klimat**, kto, dla kogo, jakie wrażenie.
+- **Kolory**, najlepiej konkretne kody (np. `#3B82F6`). Claude sam dobiera dobrze, ale jak narzucisz paletę, wynik jest bardziej spójny.
+- **Czcionki**, wystarczy podać nazwy z Google Fonts (np. „Inter", „Space Grotesk").
+- **Sekcje strony**, wymień je po kolei z konkretnymi tekstami do umieszczenia.
+- **Animacje i detale**, co ma się ruszać, świecić, pojawiać przy przewijaniu.
+- **Wymagania techniczne**, np. „wszystko w jednym pliku index.html, responsywne, bez ciężkich bibliotek".
+
+Brzmi dużo? Spokojnie, niżej masz gotowy wzór do skopiowania.
+
+## Przykład dobrego briefu, wzoruj się
 
 Poniżej jest dokładny brief, którego sam użyłem, żeby zrobić demo strony fikcyjnej polskiej firmy kosmicznej „ORBITON". Nie kopiuj go w ciemno, to nie szablon do podmiany pól. To przykład pokazujący, **jakiej głębi opisu Claude potrzebuje**, żeby zwrócić stronę z charakterem, a nie generyczny landing.
 
@@ -271,9 +283,9 @@ Na koniec daj mi gotowy link do strony.
 
 > Mała wskazówka. Jeśli wynik jest „prawie dobry", nie zaczynaj od nowa. Powiedz Claude dokładnie, co chcesz poprawić, np. „pogrub nagłówki w hero" albo „kolor pomarańczu jest za jaskrawy, ściemnij go o 20%". To działa zaskakująco dobrze.
 
-## Krok 5. Wyślij brief do Claude i pozwól mu pracować
+## Wyślij brief do Claude i pozwól mu pracować
 
-Po wysłaniu prompta, Claude robi resztę sam. Generuje plik `index.html` i wgrywa go bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś w kroku 3, sam zauważy nowy plik i opublikuje stronę.
+Po wysłaniu prompta, Claude robi resztę sam. Generuje plik `index.html` i wgrywa go bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś wcześniej, sam zauważy nowy plik i opublikuje stronę.
 
 Z poziomu rozmowy widzisz każdy krok i jeśli czegoś nie zaakceptujesz, możesz powiedzieć „cofnij" albo „popraw". Cały proces trwa zazwyczaj kilka minut.
 
