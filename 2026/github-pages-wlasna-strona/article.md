@@ -16,7 +16,6 @@ Cała sztuczka opiera się na dwóch narzędziach. AI (Claude), który napisze z
 - [Co musisz mieć](#co-musisz-mieć)
 - [Podłącz Claude do GitHuba](#podłącz-claude-do-githuba)
 - [Załóż repozytorium i włącz GitHub Pages](#załóż-repozytorium-i-włącz-github-pages)
-- [Zacznij od pomysłu, nie od narzędzi](#zacznij-od-pomysłu-nie-od-narzędzi)
 - [Napisz porządny brief dla AI](#napisz-porządny-brief-dla-ai)
 - [Przykład dobrego briefu, wzoruj się](#przykład-dobrego-briefu-wzoruj-się)
 - [Wyślij brief do Claude i pozwól mu pracować](#wyślij-brief-do-claude-i-pozwól-mu-pracować)
@@ -114,19 +113,6 @@ Repozytorium jest jeszcze puste (poza README), ale GitHub wie już, że ma publi
 
 > **Wskazówka, jeśli planujesz użyć własnych zdjęć.** Claude wgrywa pliki przez MCP w postaci tekstu (base64), więc przy większych obrazkach (powyżej ~1 MB) potrafi się zaciąć lub odmówić uploadu. Najwygodniej jest wrzucić takie zdjęcia ręcznie. W repozytorium kliknij **Add file → Upload files**, przeciągnij obrazki do folderu (np. `assets/`) i daj **Commit changes**. Potem w briefie po prostu napisz Claude, że obrazki są już w repo pod ścieżkami `assets/nazwa.jpg` i ma się do nich odwołać w `index.html`.
 
-## Zacznij od pomysłu, nie od narzędzi
-
-Najczęstszy błąd to otworzyć Claude z pustą głową i napisać „zrób mi stronę". Wynik będzie generyczny i bez duszy.
-
-Zanim cokolwiek napiszesz, odpowiedz sobie na cztery pytania.
-
-- **Czyja to strona i o czym jest?** (np. „polska firma kosmiczna budująca rakiety")
-- **Jakie wrażenie ma robić?** (poważne, ciepłe, futurystyczne, minimalistyczne?)
-- **Co ma być na stronie?** (sekcja powitalna, statystyki, oferta, kontakt?)
-- **Jaki ton i jakie kolory?** (czerń i niebieski, pastele, klasyczna biel?)
-
-Im konkretniej odpowiesz, tym lepszy będzie efekt. Claude nie czyta w myślach, daje to, co opiszesz.
-
 ## Napisz porządny brief dla AI
 
 Brief to taki „opis projektu", który wklejasz w okno czatu. Dobry brief ma kilka stałych sekcji.
@@ -137,8 +123,6 @@ Brief to taki „opis projektu", który wklejasz w okno czatu. Dobry brief ma ki
 - **Sekcje strony**, wymień je po kolei z konkretnymi tekstami do umieszczenia.
 - **Animacje i detale**, co ma się ruszać, świecić, pojawiać przy przewijaniu.
 - **Wymagania techniczne**, np. „wszystko w jednym pliku index.html, responsywne, bez ciężkich bibliotek".
-
-Brzmi dużo? Spokojnie, niżej masz gotowy wzór do skopiowania.
 
 ## Przykład dobrego briefu, wzoruj się
 
@@ -285,7 +269,7 @@ Na koniec daj mi gotowy link do strony.
 
 ## Wyślij brief do Claude i pozwól mu pracować
 
-Po wysłaniu prompta, Claude robi resztę sam. Generuje plik `index.html` i wgrywa go bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś wcześniej, sam zauważy nowy plik i opublikuje stronę.
+Po wysłaniu prompta, Claude robi resztę sam. Generuje pliki i wgrywa je bezpośrednio do Twojego repozytorium `twojlogin.github.io` na branchu `main`. GitHub Pages, który włączyłeś wcześniej, sam zauważy nowy plik i opublikuje stronę.
 
 Z poziomu rozmowy widzisz każdy krok i jeśli czegoś nie zaakceptujesz, możesz powiedzieć „cofnij" albo „popraw". Cały proces trwa zazwyczaj kilka minut.
 
@@ -301,7 +285,6 @@ Strona już żyje, ale to dopiero początek. Kilka rzeczy, które warto zrobić.
 
 - **Edytuj treść w GitHubie.** Klikasz `index.html` w repozytorium, ikona ołówka, poprawiasz tekst, „Commit changes". Strona zaktualizuje się sama w ciągu minuty.
 - **Albo wróć do Claude.** Otwierasz tę samą rozmowę i piszesz „zmień napis w hero na X". Claude poprawi plik bezpośrednio na GitHubie.
-- **Podmień dane kontaktowe i nazwę firmy** w pliku, jeśli wziąłeś szablon ORBITON.
 - **Wgraj własną domenę.** Masz `firmaxyz.pl`? W ustawieniach repozytorium w sekcji **Pages** możesz dodać **Custom domain** i strona będzie pod Twoim adresem, nadal za darmo.
 - **Dodaj kolejne podstrony.** Wystarczy wrzucić `o-mnie.html` do tego samego repozytorium, będzie dostępne pod `twojanazwa.github.io/o-mnie.html`.
 - **Wstaw formularz zapisu albo kontaktowy.** Strona jest statyczna, ale to nie znaczy, że nie zbierzesz adresów e-mail. Wejdź na konto w usłudze typu **MailerLite**, **Mailchimp** czy **Brevo**, zbuduj tam formularz i skopiuj gotowy kod osadzenia (zwykle krótki blok `<form>` albo `<script>`). Wklej go w `index.html` w miejscu, gdzie ma się pojawić formularz. Albo poproś Claude: „wstaw mi w sekcji kontakt ten kod" i wklej kod osadzenia w czacie. Mailing trafia prosto do narzędzia, bez Twojego serwera.
