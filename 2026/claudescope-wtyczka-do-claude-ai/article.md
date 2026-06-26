@@ -20,7 +20,7 @@ Po to powstała **ClaudeScope**. To darmowa wtyczka, która siedzi przyklejona d
 - [Aktywność: jak naprawdę pracujesz z Claude'em](#aktywność-jak-naprawdę-pracujesz-z-claudeem)
 - [Komunikaty: gdy coś idzie nie tak](#komunikaty-gdy-coś-idzie-nie-tak)
 - [Prywatność i bezpieczeństwo](#prywatność-i-bezpieczeństwo)
-- [Jak zainstalować](#jak-zainstalować)
+- [Instalacja](#instalacja)
 - [Na koniec](#na-koniec)
 
 ## Panel boczny: wszystko, co musisz wiedzieć, w jednym miejscu
@@ -98,6 +98,8 @@ Uprawnienia, które wtyczka deklaruje przy instalacji, są dokładnie tym, co op
 Sam kod wtyczki też nie jest „weź na słowo". ClaudeScope przeszła oficjalną weryfikację zarówno w **Chrome Web Store**, jak i w **Mozilla Add-ons**. Oba sklepy prowadzą surowy proces audytu bezpieczeństwa: sprawdzają, jakie uprawnienia rozszerzenie naprawdę wykorzystuje, czy nie wysyła danych w nieoczywiste miejsca, czy kod nie zawiera obfuskacji ani podejrzanych zewnętrznych zależności. Dopiero rozszerzenie, które przejdzie ten audyt, trafia do sklepu z zielonym światłem.
 
 ## Instalacja
+
+> **Uwaga:** ClaudeScope instalujesz w przeglądarce na **komputerze**. Próba zainstalowania jej w przeglądarce na telefonie nie zadziała. Przeglądarki mobilne (Chrome, Safari na iPhonie itd.) nie obsługują tego typu rozszerzeń. Aplikacja mobilna Claude'a to z kolei osobna historia, tam też nie da się jej zainstalować.
 
 Najpierw jedno zastrzeżenie: ClaudeScope to wtyczka **wyłącznie do przeglądarki**. Nie działa w aplikacji desktopowej Claude'a zainstalowanej na komputerze, ani w aplikacji mobilnej. Wtyczka nie ingeruje też w żaden sposób w kod aplikacji dostarczanej przez Anthropic, tylko czyta dane, które i tak Twoja przeglądarka pobiera z claude.ai.
 
