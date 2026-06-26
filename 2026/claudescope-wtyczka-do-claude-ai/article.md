@@ -101,8 +101,6 @@ Sam kod wtyczki też nie jest „weź na słowo". ClaudeScope przeszła oficjaln
 
 > **Uwaga:** ClaudeScope instalujesz w przeglądarce na **komputerze**. Próba zainstalowania jej w przeglądarce na telefonie nie zadziała. Przeglądarki mobilne (Chrome, Safari na iPhonie itd.) nie obsługują tego typu rozszerzeń. Aplikacja mobilna Claude'a to z kolei osobna historia, tam też nie da się jej zainstalować.
 
-Najpierw jedno zastrzeżenie: ClaudeScope to wtyczka **wyłącznie do przeglądarki**. Nie działa w aplikacji desktopowej Claude'a zainstalowanej na komputerze, ani w aplikacji mobilnej. Wtyczka nie ingeruje też w żaden sposób w kod aplikacji dostarczanej przez Anthropic, tylko czyta dane, które i tak Twoja przeglądarka pobiera z claude.ai.
-
 ### Chrome i przeglądarki Chromium (Edge, Brave, Opera, Vivaldi, Arc)
 
 Dla użytkowników Chrome'a i wszystkich przeglądarek opartych na Chromium (Microsoft Edge, Brave, Opera, Vivaldi, Arc) wtyczka przeszła weryfikację w **Chrome Web Store**, czyli oficjalnym sklepie wtyczek Google. Znajdziesz ją pod tym linkiem:
