@@ -68,7 +68,7 @@ Włączenie Web searcha i powtórzenie pytania o zwycięzcę turnieju z prośbą
 
 ![Claude po włączeniu Web search przyznaje błąd i podaje poprawną odpowiedź: Domen Prevc z wynikiem 1195,6 pkt](./assets/web-serch-enabled-confirmation.png)
 
-Model jasno napisał, że poprzednia odpowiedź była błędna, podał konkretne nazwisko, sezon, numer edycji i wynik punktowy, a pod odpowiedzią pojawiło się źródło, z którego skorzystał. Web search nie jest jednak srebrną kulą. Działa dobrze, gdy temat jest na tyle popularny, że w pierwszych wynikach pojawiają się świeże, wiarygodne strony. Gorzej radzi sobie, kiedy zostanie skierowany na stary artykuł, który jest dobrze wypozycjonowany, ale dotyczy poprzedniego stanu rzeczy. Z mojej praktyki płynie jedna zasada: nawet z Web searchem klikam w podany link i sprawdzam datę publikacji oraz dokładnie ten fragment, na którym model się oparł.
+Model jasno napisał, że poprzednia odpowiedź była błędna, podał konkretne nazwisko, sezon, numer edycji i wynik punktowy, a pod odpowiedzią pojawiło się źródło, z którego skorzystał. Web search nie rozwiązuje jednak wszystkich problemów. Działa dobrze, gdy temat jest na tyle popularny, że w pierwszych wynikach pojawiają się świeże, wiarygodne strony. Gorzej radzi sobie, kiedy zostanie skierowany na stary artykuł, który jest dobrze wypozycjonowany, ale dotyczy poprzedniego stanu rzeczy. Z mojej praktyki płynie jedna zasada: nawet z Web searchem klikam w podany link i sprawdzam datę publikacji oraz dokładnie ten fragment, na którym model się oparł.
 
 ## Siedem zasad, które chronią przed pewną siebie bzdurą
 
