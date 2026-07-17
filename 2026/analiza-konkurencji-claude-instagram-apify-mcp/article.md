@@ -63,6 +63,9 @@ Do testu wystarczy darmowe konto Claude. Przy większej analizie polecam plan **
    ![Apify znalezione w katalogu connectorów Claude](./assets/claude-connectors-directory.png)
 
 4. W polu **Apify API token** wklej token ze swojego konta.
+
+   ![Pole Apify API token i Enabled tools w konfiguracji connectora](./assets/apify-api-token.png)
+
 5. Pole **Enabled tools** pozostaw bez zmian i kliknij **Save**.
 
 ### Gdzie znaleźć API token
@@ -79,7 +82,7 @@ W tym samym oknie przejdź do **Tool permissions** i ustaw:
 
 Dzięki temu Claude nie będzie pytał o zgodę przy każdym odczycie, ale operacje mogące coś zmienić nadal będą wymagały zatwierdzenia. W nowej rozmowie kliknij jeszcze **+ → Connectors** i sprawdź, czy Apify jest włączone.
 
-![Konfiguracja tokena, domyślnych narzędzi i uprawnień connectora Apify](./assets/apify-connector-settings.png)
+![Ustawienia Tool permissions connectora Apify](./assets/connector-settings.png)
 
 ## Krok 5: zainstaluj skill do analizy
 
