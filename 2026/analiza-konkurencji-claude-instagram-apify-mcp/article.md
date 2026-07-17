@@ -74,8 +74,8 @@ W oknie konfiguracji connectora, tuż nad polem **Apify API token**, znajduje si
 W tym samym oknie przejdź do **Tool permissions** i ustaw:
 
 - **Interactive tools** na **Always allow**,
-- **narzędzia tylko do odczytu** na **Always allow**,
-- **narzędzia zapisujące lub usuwające dane** na **Needs approval**.
+- **Read-only tools** na **Always allow**,
+- **Write/delete tools** na **Needs approval**.
 
 Dzięki temu Claude nie będzie pytał o zgodę przy każdym odczycie, ale operacje mogące coś zmienić nadal będą wymagały zatwierdzenia. W nowej rozmowie kliknij jeszcze **+ → Connectors** i sprawdź, czy Apify jest włączone.
 
