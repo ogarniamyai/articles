@@ -98,7 +98,7 @@ Najpierw wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone 
 
 ![Menu Upload a skill w ustawieniach Skills aplikacji Claude Desktop](./assets/claude-skill-upload.png)
 
-**Skill do pobrania: [TU WSTAW LINK DO PLIKU ZIP]**
+**Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WyUEB4trd3_COp2EuMYhEob0kriCGgix)
 
 Skille działają również na darmowym planie Claude. Możesz później zmodyfikować ten plik i dopasować instrukcję precyzyjniej pod siebie.
 
@@ -108,10 +108,23 @@ Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji 
 
 Przygotowałem też gotowy prompt startowy. Uzupełnij pola dotyczące swojej marki i wklej go do nowej rozmowy:
 
-**Gotowy prompt: [TU WSTAW LINK DO PROMPTA]**
-
 ```
-[TU WSTAW PEŁNĄ TREŚĆ PROMPTA DO ANALIZY KONKURENCJI]
+Zrób mi pełną analizę konkurencji na Instagramie.
+
+Moje konto: [np. @twojanazwa]
+Nisza / branża: [np. narzędzia AI dla początkujących, dietetyka kliniczna, automatyzacja małych firm, zagraniczne kursy językowe]
+Odbiorca, do którego mówię: [np. osoby, które boją się AI i nie wiedzą, od czego zacząć]
+Konkurencja, którą znam: [wymień konta, jeśli masz listę, albo napisz "nie mam listy, znajdź kandydatów"]
+Konta, które sam obserwuję w tej niszy: [wymień, nawet jeśli nie uważasz ich za konkurencję wprost]
+Cel analizy: [np. podniesienie zaangażowania / pomysły na treści / start nowego konta / zrozumienie pozycjonowania rywali]
+Format raportu: markdown / PDF
+Kolory PDF: [podaj kolor akcentu w formacie #RRGGBB, albo napisz "wybierz sam" / "zapytaj mnie na etapie generowania"]
+
+Chcę też:
+- kartę wyników mojego konta na tle konkurencji
+- wykresy (zasięg do bazy obserwujących, rozrzut wyników, kto rośnie a kto gaśnie, rolki kontra karuzele)
+- gotowe pomysły na posty wyprowadzone z tego, co u nich działa, i z tego, czego w niszy brakuje
+- słowniczek pojęć, bo nie znam się na żargonie analityki social media
 ```
 
 Claude zada kilka pytań doprecyzowujących, a następnie rozpocznie pobieranie i analizę danych. Cały proces może potrwać od kilku do kilkudziesięciu minut. Po zakończeniu możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
