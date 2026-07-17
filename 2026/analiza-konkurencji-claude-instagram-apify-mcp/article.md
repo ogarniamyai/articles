@@ -56,11 +56,11 @@ Do testu wystarczy darmowe konto Claude. Przy większej analizie polecam plan **
 1. Otwórz Claude i przejdź do **Customize → Connectors**.
 2. Kliknij **Add → Browse connectors**.
 
-![Sekcja Connectors w Claude Desktop z otwartym menu Add](./assets/claude-connectors-add.png)
+   ![Sekcja Connectors w Claude Desktop z otwartym menu Add](./assets/claude-connectors-add.png)
 
 3. Wyszukaj **Apify** i otwórz znaleziony connector.
 
-![Apify znalezione w katalogu connectorów Claude](./assets/claude-connectors-directory.png)
+   ![Apify znalezione w katalogu connectorów Claude](./assets/claude-connectors-directory.png)
 
 4. W polu **Apify API token** wklej token ze swojego konta.
 5. Pole **Enabled tools** pozostaw bez zmian i kliknij **Save**.
