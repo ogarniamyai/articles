@@ -88,7 +88,11 @@ Dzięki temu Claude nie będzie pytał o zgodę przy każdym odczycie, ale opera
 
 Do tego procesu sam przygotowałem skill, którego używałem podczas własnych analiz. Jest to instrukcja mówiąca Claude'owi, jak poprowadzić pracę od pierwszych pytań do gotowego raportu. Dzięki temu nie musisz za każdym razem opisywać całego procesu od nowa.
 
-Najpierw wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone **Code execution and file creation**. Bez tej funkcji skille mogą nie pojawić się w ustawieniach.
+Najpierw pobierz skill:
+
+**Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WyUEB4trd3_COp2EuMYhEob0kriCGgix)
+
+Potem wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone **Code execution and file creation**. Bez tej funkcji skille mogą nie pojawić się w ustawieniach.
 
 1. Przejdź do **Customize → Skills**.
 2. Kliknij znak **+**, a następnie **Create skill**.
@@ -97,8 +101,6 @@ Najpierw wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone 
 5. Sprawdź, czy nowy skill jest włączony na liście.
 
 ![Menu Upload a skill w ustawieniach Skills aplikacji Claude Desktop](./assets/claude-skill-upload.png)
-
-**Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WyUEB4trd3_COp2EuMYhEob0kriCGgix)
 
 Skille działają również na darmowym planie Claude. Możesz później zmodyfikować ten plik i dopasować instrukcję precyzyjniej pod siebie.
 
