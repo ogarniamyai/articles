@@ -2,7 +2,7 @@
 slug: "analiza-konkurencji-claude-instagram-apify-mcp"
 title: "Przeanalizuj konkurencję na Instagramie z Claude i Apify"
 excerpt: "Pokażę Ci, jak połączyć Claude z Apify, zebrać publiczne dane z Instagrama i zamienić je w konkretną analizę konkurencji."
-cover: "./assets/cover.jpg"
+cover: "./assets/cover-v2.jpg"
 category: "Automatyzacja"
 ---
 
