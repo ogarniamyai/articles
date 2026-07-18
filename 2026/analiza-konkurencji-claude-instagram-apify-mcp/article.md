@@ -16,8 +16,9 @@ W tym artykule pokażę Ci, jak połączyć Claude z Apify i przeprowadzić anal
 - [Krok 2: zainstaluj Claude](#krok-2-zainstaluj-claude)
 - [Krok 3: połącz Claude z Apify](#krok-3-połącz-claude-z-apify)
 - [Krok 4: ustaw uprawnienia](#krok-4-ustaw-uprawnienia)
-- [Krok 5: zainstaluj skill do analizy](#krok-5-zainstaluj-skill-do-analizy)
-- [Krok 6: uruchom analizę (prompt)](#krok-6-uruchom-analizę)
+- [Krok 5: zezwól na dostęp do domen](#krok-5-zezwól-na-dostęp-do-domen)
+- [Krok 6: zainstaluj skill do analizy](#krok-6-zainstaluj-skill-do-analizy)
+- [Krok 7: uruchom analizę (prompt)](#krok-7-uruchom-analizę)
 - [O czym warto pamiętać](#o-czym-warto-pamiętać)
 - [Na koniec](#na-koniec)
 
@@ -84,7 +85,15 @@ Dzięki temu Claude nie będzie pytał o zgodę przy każdym odczycie, ale opera
 
 ![Ustawienia Tool permissions connectora Apify](./assets/connector-settings.png)
 
-## Krok 5: zainstaluj skill do analizy
+## Krok 5: zezwól na dostęp do domen
+
+Wejdź w **Settings → Capabilities**. Upewnij się, że masz włączone **Code execution and file creation** oraz **Allow network egress**, a w **Domain allowlist** wybierz **All domains**.
+
+To ustawienie pozwala Claude'owi dociągnąć brakujące dane bezpośrednio ze strony Instagrama, gdy coś nie uda się przez API Apify. Bez dostępu do domen proces może się zatrzymać w połowie albo zwrócić niepełny obraz kont.
+
+![Ustawienie Domain allowlist na All domains w Capabilities](./assets/allow-domains.png)
+
+## Krok 6: zainstaluj skill do analizy
 
 Do tego procesu sam przygotowałem skill, którego używałem podczas własnych analiz. Jest to instrukcja mówiąca Claude'owi, jak poprowadzić pracę od pierwszych pytań do gotowego raportu. Dzięki temu nie musisz za każdym razem opisywać całego procesu od nowa.
 
@@ -92,7 +101,7 @@ Najpierw pobierz skill:
 
 **Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WyUEB4trd3_COp2EuMYhEob0kriCGgix)
 
-Potem wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone **Code execution and file creation**. Bez tej funkcji skille mogą nie pojawić się w ustawieniach.
+Bez włączonej funkcji **Code execution and file creation** skille mogą nie pojawić się w ustawieniach, dlatego upewnij się, że zrobiłeś to w poprzednim kroku.
 
 1. Przejdź do **Customize → Skills**.
 2. Kliknij znak **+**, a następnie **Create skill**.
@@ -104,7 +113,7 @@ Potem wejdź w **Settings → Capabilities** i sprawdź, czy masz włączone **C
 
 Skille działają również na darmowym planie Claude. Możesz później zmodyfikować ten plik i dopasować instrukcję precyzyjniej pod siebie.
 
-## Krok 6: uruchom analizę
+## Krok 7: uruchom analizę
 
 Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji na Instagramie. Najlepiej od razu podaj konkretne profile, które chcesz uwzględnić. Masz wtedy pewność, że analizowane konta są dla Ciebie wartościowe, a Claude nie musi przeszukiwać całego Instagrama w poszukiwaniu kandydatów. To przyspiesza pracę i zmniejsza zużycie tokenów. Jeżeli nie masz jeszcze własnej listy, możesz wkleić adres swojego konta, opisać niszę i pozostawić wybór Claude'owi.
 
