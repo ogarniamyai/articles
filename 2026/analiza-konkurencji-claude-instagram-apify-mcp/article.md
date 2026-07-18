@@ -62,7 +62,7 @@ Do testu wystarczy darmowe konto Claude. Przy większej analizie polecam plan **
 
    ![Apify znalezione w katalogu connectorów Claude](./assets/claude-connectors-directory.png)
 
-4. W polu **Apify API token** wklej token ze swojego konta.
+4. W polu **Apify API token** wklej token [ze swojego konta w Apify](https://console.apify.com/settings/integrations).
 
    ![Pole Apify API token i Enabled tools w konfiguracji connectora](./assets/apify-api-token.png)
 
@@ -106,7 +106,7 @@ Skille działają również na darmowym planie Claude. Możesz później zmodyfi
 
 ## Krok 6: uruchom analizę
 
-Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji na Instagramie. Możesz podać konkretne profile, wkleić adres własnego konta albo opisać niszę i pozostawić wybór kont Claude'owi.
+Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji na Instagramie. Najlepiej od razu podaj konkretne profile, które chcesz uwzględnić. Masz wtedy pewność, że analizowane konta są dla Ciebie wartościowe, a Claude nie musi przeszukiwać całego Instagrama w poszukiwaniu kandydatów. To przyspiesza pracę i zmniejsza zużycie tokenów. Jeżeli nie masz jeszcze własnej listy, możesz wkleić adres swojego konta, opisać niszę i pozostawić wybór Claude'owi.
 
 Przygotowałem też gotowy prompt startowy. Uzupełnij pola dotyczące swojej marki i wklej go do nowej rozmowy:
 
@@ -129,7 +129,7 @@ Chcę też:
 - słowniczek pojęć, bo nie znam się na żargonie analityki social media
 ```
 
-Claude zada kilka pytań doprecyzowujących, a następnie rozpocznie pobieranie i analizę danych. Cały proces może potrwać od kilku do kilkudziesięciu minut. Po zakończeniu możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
+Claude zada kilka pytań doprecyzowujących, a w kolejnych etapach będzie pytał, czy ma przejść dalej. To dobry moment, żeby doprecyzować wcześniejsze odpowiedzi, dodać własne uwagi albo rozszerzyć zakres analizy. Następnie Claude rozpocznie pobieranie i analizę danych. **Samo wygenerowanie końcowego raportu może potrwać nawet około godziny**, a przy większym zakresie cały proces będzie jeszcze dłuższy. Nie zamykaj więc aplikacji i nie zakładaj, że raport będzie gotowy po kilkunastu minutach. Po zakończeniu możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
 
 W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczbę wyników i koszt każdej operacji:
 
@@ -139,7 +139,9 @@ W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczb
 
 Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont i publikacji zlecisz do sprawdzenia, tym dłużej potrwa cały proces i tym szybciej wykorzystasz oba limity.** Każdy kolejny post to dodatkowy wynik pobrany przez Apify oraz więcej danych, które Claude musi przeczytać i porównać. Zacznij więc od kilku kont i niewielkiej liczby publikacji, a większe zadanie uruchamiaj najlepiej tuż po odnowieniu limitu Claude.
 
-Wyższy **effort** może poprawić końcowe wnioski, ale szybciej zużywa limit. Do większości procesu wystarczy Sonnet z domyślnym albo wysokim effortem. Najmocniejszy model warto zostawić na przygotowanie końcowego raportu.
+Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **66% całego limitu dostępnego w pięciogodzinnym oknie**.
+
+Jeżeli zależy Ci na jeszcze dokładniejszych wnioskach i możesz poświęcić więcej czasu oraz limitu, przed generowaniem końcowego raportu możesz przełączyć się na mocniejszy model. Trzeba jednak liczyć się z tym, że takie zadanie może zużyć cały pozostały limit. Wtedy Claude zatrzyma pracę i trzeba będzie poczekać na jego odnowienie.
 
 Korzystaj wyłącznie z publicznie dostępnych informacji i pamiętaj, że raport jest punktem wyjścia do własnych decyzji, a nie nieomylną instrukcją. Instagram nie pokazuje publicznie wszystkich statystyk, dlatego Claude analizuje tylko tę część obrazu, którą da się zebrać z zewnątrz jako zwykły użytkownik.
 
