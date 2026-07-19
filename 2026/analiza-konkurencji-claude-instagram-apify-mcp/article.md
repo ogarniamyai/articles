@@ -26,7 +26,7 @@ W tym artykule pokażę Ci, jak połączyć Claude z Apify i przeprowadzić anal
 
 Obserwacja innych kont to jeden z pierwszych kroków przy rozwijaniu firmy albo marki osobistej na Instagramie. Pozwala sprawdzić, jakie tematy i formaty pojawiają się w danej niszy, co przyciąga uwagę oraz gdzie zostaje miejsce na coś, czego inni jeszcze nie robią.
 
-Nie chodzi o kopiowanie. Dobra analiza ma pomóc zrozumieć rynek, znaleźć niewykorzystane obszary i podejmować decyzje na podstawie danych. Ręczne zbieranie materiału z kilku kont jest mozolne i zajmuje wiele godzin. Tutaj tę pracę przejmą Claude i Apify.
+Nie chodzi o kopiowanie - nie rób tego! Dobra analiza ma pomóc zrozumieć rynek, znaleźć niewykorzystane obszary i podejmować decyzje na podstawie danych. Ręczne zbieranie materiału z kilku kont jest mozolne i zajmuje wiele godzin. Tutaj tę pracę przejmą Claude i Apify.
 
 ## Czym jest Apify
 
