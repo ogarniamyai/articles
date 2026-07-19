@@ -147,7 +147,7 @@ W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczb
 
 Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont i publikacji zlecisz do sprawdzenia, tym dłużej potrwa cały proces i tym szybciej wykorzystasz oba limity.** Każdy kolejny post to dodatkowy wynik pobrany przez Apify oraz więcej danych, które Claude musi przeczytać i porównać. Zacznij więc od kilku kont i niewielkiej liczby publikacji, a większe zadanie uruchamiaj najlepiej tuż po odnowieniu limitu Claude.
 
-Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **69% całego limitu dostępnego w pięciogodzinnym oknie** na planie Pro.
+> **Uwaga:** Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **69% całego limitu dostępnego w pięciogodzinnym oknie** na planie Pro.
 
 Jeżeli zależy Ci na jeszcze dokładniejszych wnioskach i możesz poświęcić więcej czasu oraz limitu, przed generowaniem końcowego raportu możesz przełączyć się na mocniejszy model. Trzeba jednak liczyć się z tym, że takie zadanie może zużyć cały pozostały limit. Wtedy Claude zatrzyma pracę i trzeba będzie poczekać na jego odnowienie.
 
