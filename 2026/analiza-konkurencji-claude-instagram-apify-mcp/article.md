@@ -1,7 +1,7 @@
 ---
 slug: "analiza-konkurencji-claude-instagram-apify-mcp"
 title: "Przeanalizuj konkurencję na Instagramie z Claude i Apify"
-excerpt: "Pokażę Ci, jak połączyć Claude z Apify, zebrać publiczne dane z Instagrama i zamienić je w konkretną analizę konkurencji."
+excerpt: "Analiza konkurencji jest niezwykle czasochłonnym i żmudnym procesem. Pokażę Ci jak zrobić to w godzinę z Claude i Apify."
 cover: "./assets/cover-v2.jpg"
 category: "Automatyzacja"
 ---
@@ -132,7 +132,7 @@ Nisza / branża: [np. narzędzia AI dla początkujących, dietetyka kliniczna, a
 Odbiorca, do którego mówię: [np. osoby na etacie i marki osobiste, które boją się AI i nie wiedzą, od czego zacząć]
 Konkurencja, którą znam: [wymień konta, jeśli masz listę, albo napisz "nie mam listy, znajdź kandydatów"]
 Cel analizy: [np. podniesienie zaangażowania / pomysły na treści / start nowego konta / zrozumienie pozycjonowania rywali]
-Format raportu: Stwórz trzy oddzielne raporty: markdown, PDF ze statyczynmi wykresami i obrazami, interaktywny HTML
+Format raportu: Stwórz trzy oddzielne raporty: markdown, PDF ze statyczynmi wykresami i obrazami, interaktywny HTML - zapytaj przed generowaniem
 Kolory PDF / HTML: [podaj kolor akcentu w formacie #RRGGBB, podaj skill do identyfikacji wizualnej albo napisz "wybierz sam"]
 Dodatkowe wymagania: [tutaj podaj jakieś szczególne wymagania dotyczące analizy, jeśli je masz]
 ```
