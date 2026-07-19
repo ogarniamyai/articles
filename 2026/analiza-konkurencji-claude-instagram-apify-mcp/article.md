@@ -129,18 +129,12 @@ Zrób mi pełną analizę konkurencji na Instagramie.
 
 Moje konto: [np. @twojanazwa]
 Nisza / branża: [np. narzędzia AI dla początkujących, dietetyka kliniczna, automatyzacja małych firm, zagraniczne kursy językowe]
-Odbiorca, do którego mówię: [np. osoby, które boją się AI i nie wiedzą, od czego zacząć]
+Odbiorca, do którego mówię: [np. osoby na etacie i marki osobiste, które boją się AI i nie wiedzą, od czego zacząć]
 Konkurencja, którą znam: [wymień konta, jeśli masz listę, albo napisz "nie mam listy, znajdź kandydatów"]
-Konta, które sam obserwuję w tej niszy: [wymień, nawet jeśli nie uważasz ich za konkurencję wprost]
 Cel analizy: [np. podniesienie zaangażowania / pomysły na treści / start nowego konta / zrozumienie pozycjonowania rywali]
-Format raportu: markdown / PDF
-Kolory PDF: [podaj kolor akcentu w formacie #RRGGBB, albo napisz "wybierz sam" / "zapytaj mnie na etapie generowania"]
-
-Chcę też:
-- kartę wyników mojego konta na tle konkurencji
-- wykresy (zasięg do bazy obserwujących, rozrzut wyników, kto rośnie a kto gaśnie, rolki kontra karuzele)
-- gotowe pomysły na posty wyprowadzone z tego, co u nich działa, i z tego, czego w niszy brakuje
-- słowniczek pojęć, bo nie znam się na żargonie analityki social media
+Format raportu: Stwórz trzy oddzielne raporty: markdown, PDF ze statyczynmi wykresami i obrazami, interaktywny HTML
+Kolory PDF / HTML: [podaj kolor akcentu w formacie #RRGGBB, podaj skill do identyfikacji wizualnej albo napisz "wybierz sam"]
+Dodatkowe wymagania: [tutaj podaj jakieś szczególne wymagania dotyczące analizy, jeśli je masz]
 ```
 
 Claude zada kilka pytań doprecyzowujących, a w kolejnych etapach będzie pytał, czy ma przejść dalej. To dobry moment, żeby doprecyzować wcześniejsze odpowiedzi, dodać własne uwagi albo rozszerzyć zakres analizy. Następnie Claude rozpocznie pobieranie i analizę danych. **Samo wygenerowanie końcowego raportu może potrwać nawet około godziny**, a przy większym zakresie cały proces będzie jeszcze dłuższy. Nie zamykaj więc aplikacji i nie zakładaj, że raport będzie gotowy po kilkunastu minutach. Po zakończeniu możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
@@ -153,7 +147,7 @@ W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczb
 
 Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont i publikacji zlecisz do sprawdzenia, tym dłużej potrwa cały proces i tym szybciej wykorzystasz oba limity.** Każdy kolejny post to dodatkowy wynik pobrany przez Apify oraz więcej danych, które Claude musi przeczytać i porównać. Zacznij więc od kilku kont i niewielkiej liczby publikacji, a większe zadanie uruchamiaj najlepiej tuż po odnowieniu limitu Claude.
 
-Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **66% całego limitu dostępnego w pięciogodzinnym oknie**.
+Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **69% całego limitu dostępnego w pięciogodzinnym oknie** na planie Pro.
 
 Jeżeli zależy Ci na jeszcze dokładniejszych wnioskach i możesz poświęcić więcej czasu oraz limitu, przed generowaniem końcowego raportu możesz przełączyć się na mocniejszy model. Trzeba jednak liczyć się z tym, że takie zadanie może zużyć cały pozostały limit. Wtedy Claude zatrzyma pracę i trzeba będzie poczekać na jego odnowienie.
 
