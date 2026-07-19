@@ -32,11 +32,16 @@ Nie chodzi o kopiowanie. Dobra analiza ma pomóc zrozumieć rynek, znaleźć nie
 
 [Apify](https://apify.com) to platforma z gotowymi narzędziami do pobierania publicznych danych z internetu. Takie narzędzia nazywają się tam **Actors**, czyli aktorzy. Każdy jest przygotowany do innego zadania: może zbierać dane z konkretnego serwisu albo automatyzować określony proces. Instagram Scraper jest jednym z nich, ale w Apify Store znajdziesz też wiele innych aktorów, które możesz później podłączyć do Claude i wykorzystać w podobny sposób.
 
-W tym poradniku skorzystam z aktora [Instagram Scraper](https://apify.com/apify/instagram-scraper), którego Claude będzie uruchamiał bezpośrednio z rozmowy przez connector MCP.
+W tym poradniku skorzystam z dwóch aktorów, których Claude będzie uruchamiał bezpośrednio z rozmowy przez connector MCP:
 
-Darmowy plan Apify daje obecnie **5 dolarów kredytu miesięcznie**. Sam Instagram Scraper ma osobny cennik i pobiera opłatę za każdy zwrócony wynik. Na planie darmowym kosztuje obecnie **2,70 dolara za 1000 wyników**, dlatego podstawowa analiza kilku kont powinna zmieścić się w darmowej puli. Aktualne warunki sprawdzisz osobno w [cenniku planów Apify](https://apify.com/pricing) oraz w [cenniku Instagram Scrapera](https://console.apify.com/actors/shu8hvrXbJbY3Eb9W/info/pricing?build=latest).
+- [Instagram Scraper](https://apify.com/apify/instagram-scraper) — do ogólnych danych profili i szerszego kontekstu konta,
+- [Instagram Post Scraper](https://apify.com/apify/instagram-post-scraper) — do pobierania publikacji, bo lepiej radzi sobie z wyciąganiem postów. Pierwszy aktor czasami nie zwraca ich wszystkich.
+
+Darmowy plan Apify daje obecnie **5 dolarów kredytu miesięcznie**. Oba scrapery mają osobny cennik i pobierają opłatę za każdy zwrócony wynik. Instagram Scraper na planie darmowym kosztuje obecnie **2,70 dolara za 1000 wyników**, a Instagram Post Scraper zaczyna się od **1 dolara za 1000 postów**. Przy podstawowej analizie kilku kont darmowa pula powinna wystarczyć. Aktualne warunki sprawdzisz w [cenniku planów Apify](https://apify.com/pricing), [cenniku Instagram Scrapera](https://console.apify.com/actors/shu8hvrXbJbY3Eb9W/info/pricing?build=latest) oraz na stronie [Instagram Post Scrapera](https://apify.com/apify/instagram-post-scraper/pricing).
 
 ![Instagram Scraper w Apify wraz z opisem i ceną za tysiąc wyników](./assets/instagram-scraper-apify.png)
+
+![Instagram Post Scraper w Apify wraz z opisem i ceną za tysiąc postów](./assets/instagram-posts-scraper-apify.png)
 
 ## Krok 1: załóż konto w Apify
 
@@ -89,7 +94,7 @@ Dzięki temu Claude nie będzie pytał o zgodę przy każdym odczycie, ale opera
 
 Wejdź w **Settings → Capabilities**. Upewnij się, że masz włączone **Code execution and file creation** oraz **Allow network egress**, a w **Domain allowlist** wybierz **All domains**.
 
-To ustawienie pozwala Claude'owi dociągnąć brakujące dane bezpośrednio ze strony Instagrama, gdy coś nie uda się przez API Apify. Bez dostępu do domen proces może się zatrzymać w połowie albo zwrócić niepełny obraz kont.
+To ustawienie pozwala Claude'owi dociągnąć obrazy z serwerów Instagrama. Są one potrzebne do analizy spójności wizualnej profilu.
 
 ![Ustawienie Domain allowlist na All domains w Capabilities](./assets/allow-domains.png)
 
