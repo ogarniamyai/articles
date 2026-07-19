@@ -122,6 +122,8 @@ Skille działają również na darmowym planie Claude. Możesz później zmodyfi
 
 Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji na Instagramie. Najlepiej od razu podaj konkretne profile, które chcesz uwzględnić. Masz wtedy pewność, że analizowane konta są dla Ciebie wartościowe, a Claude nie musi przeszukiwać całego Instagrama w poszukiwaniu kandydatów. To przyspiesza pracę i zmniejsza zużycie tokenów. Jeżeli nie masz jeszcze własnej listy, możesz wkleić adres swojego konta, opisać niszę i pozostawić wybór Claude'owi.
 
+> **Uwaga:** Polecam dodać **maksymalnie 5 kont**. Powyżej tej liczby raport robi się nieczytelny, analiza trwa wyraźnie dłużej, a całego procesu niemal na pewno nie zmieścisz w jednej sesji Claude.
+
 Przygotowałem też gotowy prompt startowy. Uzupełnij pola dotyczące swojej marki i wklej go do nowej rozmowy:
 
 ```
