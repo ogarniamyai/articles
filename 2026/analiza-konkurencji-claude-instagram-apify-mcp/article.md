@@ -99,7 +99,7 @@ Do tego procesu sam przygotowałem skill, którego używałem podczas własnych 
 
 Najpierw pobierz skill:
 
-**Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WyUEB4trd3_COp2EuMYhEob0kriCGgix)
+**Skill do pobrania:** [instagram-competitor-analysis.zip](https://ogarniamy.ai/files/WCaQND2cqKk7VOVG3QAlmJc1LJvInO17)
 
 Bez włączonej funkcji **Code execution and file creation** skille mogą nie pojawić się w ustawieniach, dlatego upewnij się, że zrobiłeś to w poprzednim kroku.
 
