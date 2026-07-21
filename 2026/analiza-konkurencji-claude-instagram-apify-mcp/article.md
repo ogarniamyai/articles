@@ -32,16 +32,11 @@ Nie chodzi o kopiowanie - nie rób tego! Dobra analiza ma pomóc zrozumieć ryne
 
 [Apify](https://apify.com) to platforma z gotowymi narzędziami do pobierania publicznych danych z internetu. Takie narzędzia nazywają się tam **Actors**, czyli aktorzy. Każdy jest przygotowany do innego zadania: może zbierać dane z konkretnego serwisu albo automatyzować określony proces. Instagram Scraper jest jednym z nich, ale w Apify Store znajdziesz też wiele innych aktorów, które możesz później podłączyć do Claude i wykorzystać w podobny sposób.
 
-W tym poradniku skorzystam z dwóch aktorów, których Claude będzie uruchamiał bezpośrednio z rozmowy przez connector MCP:
+W tym poradniku skorzystam z aktora [Instagram Scraper](https://apify.com/apify/instagram-scraper), którego Claude będzie uruchamiał bezpośrednio z rozmowy przez connector MCP.
 
-- [Instagram Scraper](https://apify.com/apify/instagram-scraper) — do ogólnych danych profili i szerszego kontekstu konta,
-- [Instagram Post Scraper](https://apify.com/apify/instagram-post-scraper) — do pobierania publikacji, bo lepiej radzi sobie z wyciąganiem postów. Pierwszy aktor czasami nie zwraca ich wszystkich.
-
-Darmowy plan Apify daje obecnie **5 dolarów kredytu miesięcznie**. Oba scrapery mają osobny cennik i pobierają opłatę za każdy zwrócony wynik. Instagram Scraper na planie darmowym kosztuje obecnie **2,70 dolara za 1000 wyników**, a Instagram Post Scraper zaczyna się od **1 dolara za 1000 postów**. Przy podstawowej analizie kilku kont darmowa pula powinna wystarczyć. Aktualne warunki sprawdzisz w [cenniku planów Apify](https://apify.com/pricing), [cenniku Instagram Scrapera](https://console.apify.com/actors/shu8hvrXbJbY3Eb9W/info/pricing?build=latest) oraz na stronie [Instagram Post Scrapera](https://apify.com/apify/instagram-post-scraper/pricing).
+Darmowy plan Apify daje obecnie **5 dolarów kredytu miesięcznie**. Instagram Scraper ma osobny cennik i pobiera opłatę za każdy zwrócony wynik. Aktualnie zaczyna się od **1,50 dolara za 1000 wyników**, dlatego podstawowa analiza kilku kont powinna zmieścić się w darmowej puli. Aktualne warunki sprawdzisz w [cenniku planów Apify](https://apify.com/pricing) oraz w [cenniku Instagram Scrapera](https://console.apify.com/actors/shu8hvrXbJbY3Eb9W/info/pricing?build=latest).
 
 ![Instagram Scraper w Apify wraz z opisem i ceną za tysiąc wyników](./assets/instagram-scraper-apify.png)
-
-![Instagram Post Scraper w Apify wraz z opisem i ceną za tysiąc postów](./assets/instagram-posts-scraper-apify.png)
 
 ## Krok 1: załóż konto w Apify
 
@@ -122,7 +117,7 @@ Skille działają również na darmowym planie Claude. Możesz później zmodyfi
 
 Otwórz nową rozmowę i napisz, że chcesz przeprowadzić analizę konkurencji na Instagramie. Najlepiej od razu podaj konkretne profile, które chcesz uwzględnić. Masz wtedy pewność, że analizowane konta są dla Ciebie wartościowe, a Claude nie musi przeszukiwać całego Instagrama w poszukiwaniu kandydatów. To przyspiesza pracę i zmniejsza zużycie tokenów. Jeżeli nie masz jeszcze własnej listy, możesz wkleić adres swojego konta, opisać niszę i pozostawić wybór Claude'owi.
 
-> **Uwaga:** Polecam dodać **maksymalnie 5 kont**. Powyżej tej liczby raport robi się nieczytelny, analiza trwa wyraźnie dłużej, a całego procesu niemal na pewno nie zmieścisz w jednej sesji Claude.
+> **Uwaga:** Polecam dodać **maksymalnie 3 konta konkurencji**. Ilość danych z Instagrama jest naprawdę duża. Przy większej liczbie kont Claude może nie zamknąć analizy w rozsądnym czasie, a w najgorszym scenariuszu czat nie przyjmie takiej ilości informacji i każe założyć kolejną rozmowę. Lepiej robić mniejsze, czytelne raporty. Jeśli chcesz przeanalizować więcej kont, przygotuj osobny raport.
 
 Przygotowałem też gotowy prompt startowy. Uzupełnij pola dotyczące swojej marki i wklej go do nowej rozmowy:
 
@@ -134,12 +129,12 @@ Nisza / branża: [np. narzędzia AI dla początkujących, dietetyka kliniczna, a
 Odbiorca, do którego mówię: [np. osoby na etacie i marki osobiste, które boją się AI i nie wiedzą, od czego zacząć]
 Konkurencja, którą znam: [wymień konta, jeśli masz listę, albo napisz "nie mam listy, znajdź kandydatów"]
 Cel analizy: [np. podniesienie zaangażowania / pomysły na treści / start nowego konta / zrozumienie pozycjonowania rywali]
-Format raportu: Stwórz trzy oddzielne raporty: markdown, PDF ze statycznymi wykresami i obrazami, interaktywny HTML - zapytaj przed generowaniem
-Kolory PDF / HTML: [podaj kolor akcentu w formacie #RRGGBB, podaj skill do identyfikacji wizualnej albo napisz "wybierz sam"]
+Format raportu: PDF
+Kolory PDF: [podaj kolor akcentu w formacie #RRGGBB, podaj skill do identyfikacji wizualnej albo napisz "wybierz sam"]
 Dodatkowe wymagania: [tutaj podaj jakieś szczególne wymagania dotyczące analizy, jeśli je masz]
 ```
 
-Claude zada kilka pytań doprecyzowujących, a w kolejnych etapach będzie pytał, czy ma przejść dalej. To dobry moment, żeby doprecyzować wcześniejsze odpowiedzi, dodać własne uwagi albo rozszerzyć zakres analizy. Następnie Claude rozpocznie pobieranie i analizę danych. **Samo wygenerowanie końcowego raportu może potrwać nawet około godziny**, a przy większym zakresie cały proces będzie jeszcze dłuższy. Nie zamykaj więc aplikacji i nie zakładaj, że raport będzie gotowy po kilkunastu minutach. Po zakończeniu możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
+Claude zada kilka pytań doprecyzowujących, a w kolejnych etapach będzie pytał, czy ma przejść dalej. To dobry moment, żeby doprecyzować wcześniejsze odpowiedzi, dodać własne uwagi albo zawęzić zakres analizy. Następnie Claude rozpocznie pobieranie i analizę danych. **Samo wygenerowanie końcowego raportu PDF może potrwać nawet około godziny**, a przy większym zakresie cały proces będzie jeszcze dłuższy. Nie zamykaj więc aplikacji i nie zakładaj, że raport będzie gotowy po kilkunastu minutach. Po zakończeniu dostaniesz jeden plik PDF. Możesz dalej zadawać pytania i zlecać kolejne zadania na podstawie informacji zgromadzonych w tej rozmowie.
 
 W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczbę wyników i koszt każdej operacji:
 
@@ -147,7 +142,7 @@ W Apify Console możesz w każdej chwili sprawdzić historię uruchomień, liczb
 
 ## O czym warto pamiętać
 
-Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont i publikacji zlecisz do sprawdzenia, tym dłużej potrwa cały proces i tym szybciej wykorzystasz oba limity.** Każdy kolejny post to dodatkowy wynik pobrany przez Apify oraz więcej danych, które Claude musi przeczytać i porównać. Zacznij więc od kilku kont i niewielkiej liczby publikacji, a większe zadanie uruchamiaj najlepiej tuż po odnowieniu limitu Claude.
+Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont i publikacji zlecisz do sprawdzenia, tym dłużej potrwa cały proces i tym szybciej wykorzystasz oba limity.** Każdy kolejny post to dodatkowy wynik pobrany przez Apify oraz więcej danych, które Claude musi przeczytać i porównać. Zacznij więc od maksymalnie trzech kont konkurencji i niewielkiej liczby publikacji, a większą analizę uruchamiaj najlepiej tuż po odnowieniu limitu Claude. Jeśli potrzebujesz szerszego obrazu rynku, zrób kolejny, osobny raport zamiast pakować wszystko do jednej rozmowy.
 
 > **Uwaga:** Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **69% całego limitu dostępnego w pięciogodzinnym oknie** na planie Pro.
 
@@ -159,4 +154,4 @@ Korzystaj wyłącznie z publicznie dostępnych informacji i pamiętaj, że rapor
 
 Po jednorazowym skonfigurowaniu Apify, connectora i skilla kolejne analizy sprowadzają się już głównie do opisania celu oraz wskazania kont. Najbardziej mozolną część pracy przejmują narzędzia, a Ty dostajesz uporządkowany materiał, do którego możesz wracać z kolejnymi pytaniami.
 
-Zacznij od małego testu, sprawdź jakość raportu i dopiero później zwiększaj zakres. Nie traktuj wniosków Claude'a jak gotowej recepty na rozwój profilu, ale jak punkt wyjścia do podejmowania lepszych decyzji i planowania własnych eksperymentów. Największą przewagę daje nie samo posiadanie danych, lecz umiejętność zauważenia w nich miejsca, którego inni jeszcze nie zagospodarowali.
+Zacznij od małego testu, sprawdź jakość raportu PDF i dopiero później przygotuj kolejne, osobne analizy. Nie traktuj wniosków Claude'a jak gotowej recepty na rozwój profilu, ale jak punkt wyjścia do podejmowania lepszych decyzji i planowania własnych eksperymentów. Największą przewagę daje nie samo posiadanie danych, lecz umiejętność zauważenia w nich miejsca, którego inni jeszcze nie zagospodarowali.
