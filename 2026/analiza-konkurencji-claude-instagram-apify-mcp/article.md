@@ -146,6 +146,8 @@ Analiza zużywa jednocześnie kredyty Apify oraz limit Claude. **Im więcej kont
 
 > **Uwaga:** Do większości procesu polecam model klasy **Sonnet 5** z ustawieniem **Reasoning: High**. Zapewnia dobry poziom analizy, ale nawet w tej konfiguracji trzeba przygotować się na duże zużycie limitu. W moim przypadku wygenerowanie raportu wykorzystało **69% całego limitu dostępnego w pięciogodzinnym oknie** na planie Pro.
 
+Podczas analizy Claude może też osiągnąć limity wykorzystania narzędzi i poprosić o zatwierdzenie kontynuacji. Gdy taki komunikat się pojawi, potwierdź go. Bez tej zgody proces się zatrzyma.
+
 Jeżeli zależy Ci na jeszcze dokładniejszych wnioskach i możesz poświęcić więcej czasu oraz limitu, przed generowaniem końcowego raportu możesz przełączyć się na mocniejszy model. Trzeba jednak liczyć się z tym, że takie zadanie może zużyć cały pozostały limit. Wtedy Claude zatrzyma pracę i trzeba będzie poczekać na jego odnowienie.
 
 Korzystaj wyłącznie z publicznie dostępnych informacji i pamiętaj, że raport jest punktem wyjścia do własnych decyzji, a nie nieomylną instrukcją. Instagram nie pokazuje publicznie wszystkich statystyk, dlatego Claude analizuje tylko tę część obrazu, którą da się zebrać z zewnątrz jako zwykły użytkownik.
@@ -153,5 +155,7 @@ Korzystaj wyłącznie z publicznie dostępnych informacji i pamiętaj, że rapor
 ## Na koniec
 
 Po jednorazowym skonfigurowaniu Apify, connectora i skilla kolejne analizy sprowadzają się już głównie do opisania celu oraz wskazania kont. Najbardziej mozolną część pracy przejmują narzędzia, a Ty dostajesz uporządkowany materiał, do którego możesz wracać z kolejnymi pytaniami.
+
+Wygenerowany PDF to nie jest ostateczny koniec pracy. W tej samej rozmowie możesz dalej dopytywać o szczegóły i prosić Claude'a, żeby dopisał wybrane wnioski albo sekcje do raportu. Gotowe PDF-y z analizą konkurencji możesz później wykorzystać także w innych czatach albo projektach Claude, jako punkt wyjścia do planowania treści, strategii albo kolejnych badań.
 
 Zacznij od małego testu, sprawdź jakość raportu PDF i dopiero później przygotuj kolejne, osobne analizy. Nie traktuj wniosków Claude'a jak gotowej recepty na rozwój profilu, ale jak punkt wyjścia do podejmowania lepszych decyzji i planowania własnych eksperymentów. Największą przewagę daje nie samo posiadanie danych, lecz umiejętność zauważenia w nich miejsca, którego inni jeszcze nie zagospodarowali.
